@@ -1,17 +1,11 @@
 
 /*
 *********************************************************************************************************
-orbit. source code
-Author       : sake#0324
-version      : 1.4
-Last Updated : 3/24/20
+Orbit
+Author       : Sake#0009
+version      : 1.4.2
 *********************************************************************************************************
 */
-
-::placeholder, body, button, input, select, textarea
-{
-    font-family: 'Whitney'!important;
-}
 
 /*
 *********************************************************************************************************
@@ -357,7 +351,9 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
     border-radius: 25px!important;
 }
 /*@ Mentions / Search Results page*/
-.theme-dark .messagesPopoutWrap-1MQ1bW, .theme-dark .searchResultsWrap-2DKFzt
+/*Server Settings*/
+.theme-dark .messagesPopoutWrap-1MQ1bW, .theme-dark .searchResultsWrap-2DKFzt,
+.styleFixed-sX-yHV
 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%), var(--userPopout);
     background-size: cover!important;
@@ -458,7 +454,10 @@ Avatars & Main Chat/ chat message
     background: transparent;
 }
 */
-
+.mention-1f5kbO
+{
+    background: var(--mainColor);
+}
 
 /* DON'T TOUCH */
 .theme-dark .dividerEnabled-2TTlcf {
@@ -518,10 +517,12 @@ User Popouts
 }
  .userPopout-3XzG_A {
      border:none!important;
-     background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.1) 45%, rgba(0,0,0,0.45) 100%), var(--userPopout)!important;
+     background-image: linear-gradient(to bottom, rgba(80, 80, 80, 0.6) 0%,rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.45) 100%), var(--userPopout)!important;
      background-size: cover!important;
      background-position: center!important;
-     border-radius: 20px;
+     border-radius: 35px;
+     border: none!important;
+     box-shadow: 0 5px 40px #000;
 }
 /*Roles*/
 .role-2irmRk,.theme-dark .note-3kmerW textarea, .bodyTitle-Y0qMQz, .theme-dark .quickMessage-1yeL4E,
@@ -537,11 +538,7 @@ User Popouts
     font-weight: 900!important;
     font-family: Whitney!important;
 }
-/*user popout top header padding*/
-.headerTop-3C2Zn0
-{
-    padding: 0px 0px 110px 0px;
-}
+
 /*Game Header Fix*/
 .headerTop-3C2Zn0
 {
@@ -750,7 +747,7 @@ Variables
 */
 :root 
 {
-  --version-content : " 1.4";
+  --version-content : " 1.4.3";
   --themeName       : "Orbit";
   --watermark       :  "made by Sake#0009";
 
@@ -851,7 +848,7 @@ folder icons
     background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%), var(--settingsBackground);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
     border-radius: 30px 0 0 30px;
 
 }
@@ -1466,7 +1463,7 @@ Channel Unread Dot
     width: 8px;
     border-radius: 50%;
     top: 50%;
-    left: 0;
+    left: 5px;
     margin-top: -4px;
     background: var(--mainColor)!important; 
 }
@@ -2364,7 +2361,22 @@ border-radius: 10px;
 {
     background: rgba(0,0,0,0.55);
 }
-
+/*Block Quotes*/
+.blockquoteContainer-U5TVEi blockquote
+{
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 0px 20px 20px 0px;
+}
+.blockquoteDivider-2hH8H6
+{
+    background-color: var(--mainColor);
+}
+/*channel list new scrollbar*/
+.theme-dark .scrollerThemed-2oenus.themeGhostHairline-DBD-2d .scroller-2FKFPG::-webkit-scrollbar-thumb
+{
+    background: var(--mainColor);
+}
 /*
 *********************************************************************************************************
 Version Content Keyframes - used for the intro animation when loading the css.

@@ -37,6 +37,18 @@ DISCLAIMER: This theme is meant for personal use and use for my friends.
 :root
 {
 /*
+    @imports to copy:
+
+    Horizontal SeverList:
+    ------------------------------------------------------------------------------------------------------
+    @import url("https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/base.css");
+
+    Vertical ServerList:
+    ------------------------------------------------------------------------------------------------------
+    @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css');
+    
+*/
+/*
 *********************************************************************************************************
 Theme Settings
 *********************************************************************************************************
@@ -67,4 +79,7 @@ Theme Settings
   --aligndms           : 0;	                                     /* should DMs be aligned in columns:    */
                                                                  /* 0 = no, 1 = yes                      */
   --round              : 50%;	                                 /* Roundness for guilds & borders       */
+  /*use these if you are using horizontal server lists*/
+  --HSL-server-icon-size: 50px;  /* Size of the server icons | DEFAULT: 40px */
+  --HSL-server-spacing: 10px;  /* Spacing between each server icon | DEFAULT: 10px */
 }

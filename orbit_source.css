@@ -12,6 +12,7 @@ Last Updated : 3/24/20
 {
     font-family: 'Whitney'!important;
 }
+
 /*
 *********************************************************************************************************
 Settings Page
@@ -1822,12 +1823,7 @@ margin-top: 0px;
 {
     background: transparent;
 }
-.placeholder-37qJjk
-{
-    color: #fff;
-    opacity: 0.4;
-    left: 30px;
-}
+
 .theme-dark .inner-zqa7da
 {
 padding-left: 20px;
@@ -2273,7 +2269,7 @@ Stream background removal
 .placeholder-37qJjk {
     color: #fff;
     opacity: 0.4;
-    left: 40px;
+    left: 25px;
 }
 .live-vBWnV6.da-live.liveSmall-1dy2uA.textBadge-1iylP6.base-PmTxvP.da-textBadge.da-base
 {
@@ -2368,6 +2364,7 @@ border-radius: 10px;
 {
     background: rgba(0,0,0,0.55);
 }
+
 /*
 *********************************************************************************************************
 Version Content Keyframes - used for the intro animation when loading the css.
@@ -2385,7 +2382,6 @@ Version Content Keyframes - used for the intro animation when loading the css.
     bottom: 0;
     left: 0;
     letter-spacing: 5px;
-    text-transform: lowercase;
     color: var(--mainColor);
     font-size: 80px;
     font-weight: bolder;

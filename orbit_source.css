@@ -1511,6 +1511,8 @@ new message bar at the top of discord
     background: linear-gradient(to right, var(--mainColor), var(--secondColor))!important;
     margin-right: 80px;
     z-index: 9999999!important;
+    border-radius: 30px;
+    margin-top: 10px;
 }
     /*Bottom new Message bar*/
     .unread-1xRYoj

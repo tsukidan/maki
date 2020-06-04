@@ -692,7 +692,7 @@ Main Background code
 }
 /*
 *********************************************************************************************************
-Discord Watermark removal
+Discord Logo removal
 *********************************************************************************************************
 */
 .wordmarkWindows-1v0lYD
@@ -747,9 +747,9 @@ Variables
 */
 :root 
 {
-  --version-content : " 1.4.4";
+  --version-content : " 1.4.5";
   --themeName       : "Orbit";
-  --watermark       :  "made by Sake#0009";
+  --watermark       :  " ";
 
 /*
 *********************************************************************************************************
@@ -1618,14 +1618,14 @@ Bottom-left of discord - user container and text box
 /*User Container Watermark*/
 .container-3baos1::after
 {
-    content     : var(--themeName) var(--version-content) " - " var(--watermark);
+    content     : var(--themeName) var(--version-content) " " var(--watermark);
     margin-top  : 40px;
     position    : absolute;
     font-weight : 900!important;
     font-size   : 11px;
     opacity     : 1;
     font-family : 'IBM Plex Mono', 'Whitney';
-    color       :#FFF!important;
+    color       :rgba(255, 255, 255, 0.473)!important;
 }
 /*User Container Buttons*/
 .button-14-BFJ, .gameIcon-2YB8Et
@@ -2379,6 +2379,12 @@ border-radius: 10px;
 .theme-dark .scrollerThemed-2oenus.themeGhostHairline-DBD-2d .scroller-2FKFPG::-webkit-scrollbar-thumb
 {
     background: var(--mainColor);
+}
+
+.embedFull-2tM8-- .embedMedia-1guQoW,
+.embedGalleryImagesWrapper-2Qn2vv
+{
+    filter: drop-shadow(0 10px 20px #000);
 }
 /*
 *********************************************************************************************************

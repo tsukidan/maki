@@ -1,9 +1,8 @@
-
 /*
 *********************************************************************************************************
 Orbit
 Author       : Sake#0009
-version      : 1.4.4
+version      : 1.4.6
 *********************************************************************************************************
 */
 
@@ -208,7 +207,7 @@ User Profiles
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px;
-    border-radius: 50px;
+    border-radius: 30px;
     box-shadow: 0 10px 100px rgba(0,0,0,0.95);
 }
 /*Border Removal*/
@@ -231,13 +230,13 @@ User Profiles
 /*using top and bottom values for the main gradient over the picture*/
 .backdrop-1wrmKB, .backdropWithLayer-3_uhz4
 {
-    background:linear-gradient(to bottom, rgba(0, 0, 0, var(--topValue)) 0%,
-                                          rgba(0, 0, 0, var(--bottomValue)) 100%), 
-                                          var(--mainBackground)!important;
+    background: rgba(0,0,0,0.25)!important;
     background-repeat: no-repeat!important;
     background-position: right center!important;
     background-size: cover!important;
-    filter: blur(5px);
+    backdrop-filter: blur(10px) saturate(140%);
+    opacity: 1!important;
+    transition : -webkit-backdrop-filter 2s ease-in-out;
 }
 /*Border Removal*/
 .tabBarContainer-1s1u-z
@@ -339,26 +338,30 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
     /*context menu*/
 .theme-dark .menu-Sp6bN1, .styleFlexible-wGDiIL
 {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), var(--contextMenu);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), var(--contextMenu);
     background-size: cover!important;
     background-position: center;
-    border-radius: 25px!important;
+    border-radius: 15px!important;
+}
+.button-F9qN4n, .wrapper-3_530D
+{
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.4));
 }
 .submenu-2-ysNh
 {
     background: rgba(0,0,0,0.5)!important;
 
-    border-radius: 25px!important;
+    border-radius: 15px!important;
 }
 /*@ Mentions / Search Results page*/
 /*Server Settings*/
 .theme-dark .messagesPopoutWrap-1MQ1bW, .theme-dark .searchResultsWrap-2DKFzt,
 .styleFixed-sX-yHV
 {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%), var(--userPopout);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), var(--userPopout);
     background-size: cover!important;
     background-position: center!important; 
-    border-radius: 30px;
+    border-radius: 15px;
 }
     /*@ Mentions Header*/
     .theme-dark .header-ykumBX, .theme-dark .messageGroupWrapper-o-Zw7G
@@ -520,7 +523,7 @@ User Popouts
      background-image: linear-gradient(to bottom, rgba(80, 80, 80, 0.6) 0%,rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.45) 100%), var(--userPopout)!important;
      background-size: cover!important;
      background-position: center!important;
-     border-radius: 35px;
+     border-radius: 20px;
      border: none!important;
      box-shadow: 0 5px 40px #000;
 }
@@ -650,6 +653,8 @@ text-align: right!important;
 .reaction-1hd86g.reactionMe-wv5HKu
 {
     background: rgba(0,0,0,0.65);
+    border: 1.5px solid var(--mainColor);
+    filter: drop-shadow(0 2px 3px var(--mainColor));
 }
 .reactionMe-wv5HKu .reactionCount-2mvXRV, .reactionMe-wv5HKu:hover .reactionCount-2mvXRV
 {
@@ -747,7 +752,7 @@ Variables
 */
 :root 
 {
-  --version-content : " 1.4.5";
+  --version-content : " 1.4.6";
   --themeName       : "Orbit";
   --watermark       :  " ";
 
@@ -1067,7 +1072,7 @@ embed edits
     background:linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), var(--profileBackground);
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 25px;
+    border-radius: 15px;
     background-position: center;
 }
 
@@ -1075,6 +1080,12 @@ embed edits
 .embed-IeVjo6
 {
     display: inline-block;
+    margin-left: 10px;
+    left: -15px;
+}
+.embedWrapper-lXpS3L.da-embedWrapper.embedFull-2tM8--.embed-IeVjo6.da-embedFull.da-embed.markup-2BOw-j.da-markup
+{
+    left: 25px;
 }
 .embedDescription-1Cuq9a, .embedFieldValue-nELq2s
 {
@@ -1085,9 +1096,30 @@ embed edits
 {
     color: #FFF!important;
 }
-.container-1ov-mD>*
+.imageWrapper-2p5ogY img
 {
-    margin-left: 10px;
+    border-radius: 10px;
+}
+/*Reactions*/
+.reaction-1hd86g {
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 10px!important;
+    margin-bottom: 0;
+    margin-top: 5px;
+    -webkit-user-select: none;
+    margin-left: -7px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: background-color .1s ease;
+    transition: background-color .1s ease;
+    background: var(--background-modifier-accent);
+    border: 1.5px solid transparent;
+    border-radius: 10px!important;
 }
 /*
 *********************************************************************************************************
@@ -1400,6 +1432,8 @@ background: linear-gradient(to right, var(--mainColor) 0%, var(--secondColor) 10
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.4);
     margin-right: 80px;
+    padding-top: 5px;
+    z-index: 999999999!important;
 }
 /*
 *********************************************************************************************************
@@ -1833,10 +1867,7 @@ padding-left: 20px;
     padding-left: 20px;
 }
 
-.imageWrapper-2p5ogY img
-{
-    border-radius: 25px;
-}
+
 .container-1YxwTf .container-1e22Ot > *
 {
         border-radius: 25px;
@@ -2144,7 +2175,8 @@ height: 20px;
 .text-37NqbO .customStatusEmoji-1o3-7b
 {
     height: 20px;
-    margin-top: -10px;
+    width: 40px;
+    margin-top: 0px;
     margin-left: -10px;
     margin-right: 0;
 }
@@ -2157,26 +2189,6 @@ height: 20px;
 {
     margin-top: calc(var(--avatarSize) - var(--messageSpacing));
 }
-/*
-.container-1YxwTf .container-1e22Ot {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.container-1YxwTf .container-1e22Ot > :not(:last-of-type){
-	margin-right: 10px;
-}
-
-.container-1YxwTf .container-1e22Ot > *{
-	margin-top: 5px;
-}
-
-.reactions-1xb2Ex {
-	width: 100%;
-	flex: 100%;
-	order: 9999999999;
-}
-*/
 /*Border for new msgs*/
 .group-spacing-16 .beforeGroup-1rH1F0
 {
@@ -2386,15 +2398,35 @@ border-radius: 10px;
 {
     filter: drop-shadow(0 10px 20px #000);
 }
+.emoji.emoji-2cWBLE.da-emoji.emoji-kdONqz.da-emoji.customEmoji-2_2FwB.da-customEmoji
+{
+    height: 30px;
+    width: 30px;
+    margin-left: -10px;
+}
+.theme-dark .inset-3sAvek
+{
+    background: rgba(0,0,0,0.45);
+}
+/*discord nitro store thing*/
+.applicationStore-1pNvnv
+{
+    background: transparent;
+}
+.emojiPickerInExpressionPicker-3IzIcv .emojiPicker-3PwZFl
+{
+    width: 100%;
+}
+.closedFolderIconWrapper-15K9MK, .folder-21wGz3, .folderIconWrapper-226oVY
+{
+    border-radius: 50%!important;
+}
 /*
 *********************************************************************************************************
 Version Content Keyframes - used for the intro animation when loading the css.
 *********************************************************************************************************
 */
-.emojiPickerInExpressionPicker-3IzIcv .emojiPicker-3PwZFl
-{
-    width: 100%;
-}
+
 #app-mount::after {
     content: "";
     position: absolute;

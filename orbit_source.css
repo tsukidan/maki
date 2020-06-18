@@ -1,8 +1,9 @@
+
 /*
 *********************************************************************************************************
 Orbit
 Author       : Sake#0009
-version      : 1.4.6
+version      : 1.4.7
 *********************************************************************************************************
 */
 
@@ -201,6 +202,23 @@ User Profiles
 {
     background:transparent;
 }
+
+.inner-1ilYF7
+{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), var(--profileBackground)!important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 100px rgba(0,0,0,0.95);
+}
+.theme-dark .modal-yWgWj-
+{
+    margin: -50px;
+    background: rgba(0,0,0,0.4)!important;
+}
+/*
+
 .root-SR8cQa
 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), var(--profileBackground)!important;
@@ -210,6 +228,7 @@ User Profiles
     border-radius: 30px;
     box-shadow: 0 10px 100px rgba(0,0,0,0.95);
 }
+*/
 /*Border Removal*/
 .theme-dark .connectedAccount-36nQx7, .theme-dark .userInfoSection-2acyCx+.userInfoSection-2acyCx
 {
@@ -316,6 +335,12 @@ Quick Switcher
 Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned Messages Menu.
 *********************************************************************************************************
 */
+/*Context Menu Colors*/
+.colorDefault-2K3EoJ
+{
+    color: #FFF;
+    font-weight: 900;
+}
 /*Search Suggestions*/
 .resultsGroup-r_nuzN 
 {
@@ -350,18 +375,70 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
 .submenu-2-ysNh
 {
     background: rgba(0,0,0,0.5)!important;
-
+    backdrop-filter: blur(20px);
     border-radius: 15px!important;
 }
 /*@ Mentions / Search Results page*/
 /*Server Settings*/
-.theme-dark .messagesPopoutWrap-1MQ1bW, .theme-dark .searchResultsWrap-2DKFzt,
-.styleFixed-sX-yHV
+.message-2g38UB.da-message.groupStart-23k01U.da-groupStart.wrapper-2a6GCs.da-wrapper.cozy-3raOZG.da-cozy.zalgo-jN1Ica.da-zalgo .avatar-1BDn8e.da-avatar,
+.message-2DieIs.da-message.wrapper-2a6GCs.da-wrapper.cozy-3raOZG.da-cozy.zalgo-jN1Ica.da-zalgo .avatar-1BDn8e.da-avatar
+{
+    height: 40px!important;
+    width: 40px!important;
+}
+.messageContainer-1ei2zM,
+.container-3iAQ-0
+{
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+/*@Message Container*/
+.container-3iAQ-0,
+.messageContainer-1ei2zM
+{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.theme-dark .header-2-Imhb .tabBar-1kuXvJ .tab-ck0077.active-1MbGPa
+{
+    color: var(--mainColor);
+}
+.channelHeader-3Gd2xq
+{
+    background: rgba(0,0,0,0.75);
+    padding: 25px;
+    border-radius: 20px;
+}
+.searchResultsWrap-3-pOjs
+{
+    border-radius: 30px;
+    box-shadow: 0 8px 20px #000;
+}
+.theme-dark .messagesPopoutWrap-1MQ1bW
+{
+    width: 700px;
+    padding-right: 20px;
+}
+/*
+.title-3qD0b-
+{
+    display: grid;
+    margin-bottom: 10px;
+}
+*/
+
+.scroller-3-yaBL .scroller-2FKFPG::-webkit-scrollbar-thumb
+{
+    background: transparent!important;
+}
+.theme-dark .messagesPopoutWrap-1MQ1bW, .searchResultsWrap-3-pOjs,
+.styleFixed-sX-yHV,
+.container-enaOkj
 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), var(--userPopout);
     background-size: cover!important;
     background-position: center!important; 
     border-radius: 15px;
+    max-width: 550px;
 }
     /*@ Mentions Header*/
     .theme-dark .header-ykumBX, .theme-dark .messageGroupWrapper-o-Zw7G
@@ -397,6 +474,15 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
 Avatars & Main Chat/ chat message
 *********************************************************************************************************
 */
+/*Edited*/
+.edited-3sfAzf
+{
+    color: #FFF;
+    font-weight: 900;
+    background: rgba(0,0,0,0.55);
+    padding: 2px;
+    border-radius: 5px;
+}
 /* TEMP FIX */
 /* Change Avatar Size(also moves username for you) */
 .avatar-1BDn8e{
@@ -631,6 +717,31 @@ Emojis
 Reaction Size Fix For Emoji
 *********************************************************************************************************
 */
+.card-1yV8cG
+{
+    background: rgba(0,0,0,0.55);
+}
+/*Reaction Modual*/
+.theme-dark .scroller-1-nKid,
+.theme-dark .container-1If-HZ, .theme-dark .reactors-Blmlhw
+{
+    background: transparent;
+}
+.inner-1ilYF7
+{
+    background: var(--profileBackground);
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.username-2b1r56.da-username.username-Af3M5Y.da-username
+{
+    font-size: 15px;
+}
+.theme-dark .reactorDefault-1IUqMZ
+{
+    box-shadow: none;
+}
 /*Reaction Count*/
 .reactionCount-2mvXRV
 {
@@ -752,7 +863,7 @@ Variables
 */
 :root 
 {
-  --version-content : " 1.4.6";
+  --version-content : " 1.4.7";
   --themeName       : "Orbit";
   --watermark       :  " ";
 
@@ -1266,11 +1377,6 @@ Friendslist names, etc.
 {
     border:none;
 }
-/*Friendlist Buttons*/
-.theme-dark .container-1r6BKw
-{
-    filter:drop-shadow(var(--dropShadowValue))!important;
-}
 /*Freinds list avatars drop shadow*/
 .channel-2QD9_O a /*1.0.2 - 9/5/2019*/
 {
@@ -1308,6 +1414,7 @@ Friendslist Edits - Text Color, shadow, etc
     color: var(--boldTextColor);
     opacity: 1!important;
 }
+
 /*
 *********************************************************************************************************
 Usernames in chat, main chat font, and guild channels, Divider Settings
@@ -1315,11 +1422,14 @@ Usernames in chat, main chat font, and guild channels, Divider Settings
 */
 /*Channels Arrow*/
 /*Upload Modual*/
-.uploadModal-2ifh8j
+.theme-dark .footer-3mqk7D 
 {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), var(--profileBackground);
-    background-size: cover;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    box-shadow: none;
+}
+.theme-dark .uploadModal-2ifh8j
+{
+    background: transparent;
+    box-shadow: none;
 }
 
 .uploadModal-2ifh8j .footer-3mqk7D
@@ -1522,10 +1632,7 @@ Box-shadow/Border removals
 {
     display:none;
 }
-.theme-dark .container-1r6BKw
-{
-    box-shadow: none;
-}
+
 /*Date Messages Border*/
 .theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI:after,
 .theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI:before,
@@ -2189,6 +2296,7 @@ height: 20px;
 {
     margin-top: calc(var(--avatarSize) - var(--messageSpacing));
 }
+
 /*Border for new msgs*/
 .group-spacing-16 .beforeGroup-1rH1F0
 {
@@ -2344,12 +2452,7 @@ Stream background removal
     background: rgba(0,0,0,0.4);
     padding: 10px;
 }
-.searchResultsWrap-3-pOjs
-{
-    background: rgba(0,0,0,0.4);
-    border-radius: 30px;
-    box-shadow: 0 8px 20px #000;
-}
+
 .searchHeader-1EzJGH
 {
     box-shadow: none;
@@ -2420,6 +2523,45 @@ border-radius: 10px;
 .closedFolderIconWrapper-15K9MK, .folder-21wGz3, .folderIconWrapper-226oVY
 {
     border-radius: 50%!important;
+}
+
+.theme-dark .container-1r6BKw
+{
+    padding-right: 30px;
+}
+/*New Server Box*/
+.header-3ZP1MY
+{
+    color:#FFF;
+}
+.action-1lSjCi
+{
+    border: none;
+    background-color: rgba(0,0,0,0.65)!important;
+}
+/*add role*/
+
+.theme-dark .autocompleteArrow-Zxoy9H, .theme-dark .header-2bNvm4,
+.theme-dark .container-VSDcQc .sectionTag-pXyto9
+{
+    background: transparent;
+}
+.theme-dark .autocompleteArrow-Zxoy9H, .theme-dark .autocompleteShadow-iiGWFU
+{
+    border:none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+.theme-dark .row-rrHHJU, .theme-dark .row-rrHHJU span
+{
+    font-weight: 900;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.theme-dark .container-VSDcQc .sectionTag-pXyto9
+{
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 /*
 *********************************************************************************************************

@@ -2573,6 +2573,10 @@ border-radius: 10px;
     margin-left: 50px;
     max-width: 350px;
 }
+#bd-pub-button, #bd-pub-li
+{
+    display:none;
+}
 /*
 *********************************************************************************************************
 Version Content Keyframes - used for the intro animation when loading the css.

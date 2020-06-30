@@ -1,0 +1,895 @@
+
+/*
+*********************************************************************************************************
+Sharon Spotify Beta - 0.1
+Source Code: Please do not modify below, as it may break your theme.
+Stan LOONA.
+*********************************************************************************************************
+*/
+/*
+*********************************************************************************************************
+source code :root element, please do not edit.
+*********************************************************************************************************
+*/
+:root
+{
+	--version-content : " 0.3.2";
+	--themeName       : "Orbit";
+	--watermark       : "Created by Sake.";
+}
+/*
+*********************************************************************************************************
+main transparency fixes
+*********************************************************************************************************
+*/
+[dir] .section-divider-sticky-wrapper {
+    margin-bottom: 16px;
+    background-color: transparent!important;
+}
+[dir] .buddy-card {
+    padding: 18px 16px;
+    background-color: transparent!important;
+}
+[dir] body {
+    background: transparent!important;
+}
+[dir] #view-buddy-list {
+    background-color: transparent!important;
+}
+/*sidebar playlists list*/
+[dir] .sidebar .sidebar-navbar {
+    padding-top: 10px;
+	background-color: transparent!important;
+	filter:drop-shadow(2px 4px 6px rgba(0,0,0,0.6));
+}
+[dir] .sidebar {
+    background-color: transparent!important;
+}
+[dir] .LeftSidebar__scroll-section {
+    background-color: transparent!important;
+}
+[dir] .view-player {
+    background: transparent!important;
+    border-top: none;
+}
+iframe
+{
+	background: transparent!important;
+}
+body, html
+{
+	background: transparent!important;
+}
+#view-content>.embedded-app, #view-content>iframe, #view-content
+{
+	background: transparent!important;
+}
+.body-container--rtl-off.body-container--windows.content-visible.is-main-content-page-iframe.scrollbar-style-visible-windows
+{
+	background: transparent!important;
+}
+
+/*
+*********************************************************************************************************
+main background
+*********************************************************************************************************
+*/
+.body-container--rtl-off.body-container--windows.flex-col-container.scrollbar-style-visible-windows
+{
+	background:linear-gradient(to bottom, rgba(0, 0, 0, var(--topValue)) 0%,
+	rgba(0, 0, 0, var(--bottomValue)) 100%), 
+	var(--mainBackground)!important;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+}
+/*
+*********************************************************************************************************
+playlist corner radius
+*********************************************************************************************************
+*/
+[dir] .card-placeholder-wrapper {
+	background: transparent!important;
+}
+[dir] .card-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	border-radius: 30px;
+}
+.glue-page-header__content .glue-page-header__image-inner {
+    box-shadow: none;
+	border-radius: 30px;
+	filter: drop-shadow(2px 3px 5px black);
+}
+/*
+*********************************************************************************************************
+border removal
+*********************************************************************************************************
+*/
+.GlueSectionDivider__container, .TableCell,
+.Table__sticky-header-table, .Table__table,
+.LeftSidebarNewPlaylistButton__button,
+.section-divider,
+.tl-header th, .tl-cell,
+/*Tracklist bottom border*/
+.tracklist-album, .tracklist-chart, .tracklist-basic, .tracklist-playlist, 
+.tracklist-podcast, .tracklist-popular, .tracklist-station, .tracklist-queue, .tracklist-search,
+.list-group-item
+{
+	border: none!important;
+}
+
+/*
+*********************************************************************************************************
+Homescreen Album Cover Border Radius
+*********************************************************************************************************
+*/
+.Card__image
+{
+	border-radius: 25px;
+}
+.Card__image-hit-area
+{
+	background: transparent!important;
+}
+/*
+*********************************************************************************************************
+now playing fixes
+*********************************************************************************************************
+*/
+.view-player .text-container .text-item-container .text-item .scroll-text-container:after
+{
+	background:transparent;
+}
+
+/*
+*********************************************************************************************************
+Scrollbar Fixes
+*********************************************************************************************************
+*/
+.scrollbar-style-visible-mac::-webkit-scrollbar-thumb, .scrollbar-style-visible-mac ::-webkit-scrollbar-thumb, 
+.scrollbar-style-visible-windows::-webkit-scrollbar-thumb, .scrollbar-style-visible-windows ::-webkit-scrollbar-thumb,
+.scrollbar-style-visible-linux::-webkit-scrollbar-thumb, .scrollbar-style-visible-linux ::-webkit-scrollbar-thumb {
+	background: transparent!important;
+    max-width: 2px!important;
+}
+/*Scrollbar bg*/
+.scrollbar-style-visible-mac ::-webkit-scrollbar-track, .scrollbar-style-visible-mac::-webkit-scrollbar-track,
+.scrollbar-style-visible-windows ::-webkit-scrollbar-track, .scrollbar-style-visible-windows::-webkit-scrollbar-track, 
+.scrollbar-style-visible-linux ::-webkit-scrollbar-track, .scrollbar-style-visible-linux::-webkit-scrollbar-track
+{
+	background: transparent!important;
+}
+/*Scrollbar background?*/
+.scrollbar-style-visible-mac::-webkit-scrollbar-thumb, .scrollbar-style-visible-mac ::-webkit-scrollbar-thumb,
+.scrollbar-style-visible-windows::-webkit-scrollbar-thumb, .scrollbar-style-visible-windows ::-webkit-scrollbar-thumb,
+.scrollbar-style-visible-linux::-webkit-scrollbar-thumb, .scrollbar-style-visible-linux ::-webkit-scrollbar-thumb,
+.scrollbar-style-visible-mac .LeftSidebar__scroll-section::-webkit-scrollbar-button,
+.scrollbar-style-visible-mac .LeftSidebar__scroll-section::-webkit-scrollbar-track,
+.scrollbar-style-visible-windows .LeftSidebar__scroll-section::-webkit-scrollbar-button, 
+.scrollbar-style-visible-windows .LeftSidebar__scroll-section::-webkit-scrollbar-track
+{
+	background-color: transparent!important;
+}
+.scrollbar-style-visible-mac::-webkit-scrollbar-corner, .scrollbar-style-visible-mac ::-webkit-scrollbar-corner, 
+.scrollbar-style-visible-windows::-webkit-scrollbar-corner, .scrollbar-style-visible-windows ::-webkit-scrollbar-corner, 
+.scrollbar-style-visible-linux::-webkit-scrollbar-corner, .scrollbar-style-visible-linux ::-webkit-scrollbar-corner
+{
+	background:transparent;
+}
+
+.scrollbar-style-visible-mac::-webkit-scrollbar-thumb:hover, .scrollbar-style-visible-mac ::-webkit-scrollbar-thumb:hover,
+.scrollbar-style-visible-windows::-webkit-scrollbar-thumb:hover, .scrollbar-style-visible-windows ::-webkit-scrollbar-thumb:hover,
+.scrollbar-style-visible-linux::-webkit-scrollbar-thumb:hover, .scrollbar-style-visible-linux ::-webkit-scrollbar-thumb:hover,
+.scrollbar-style-visible-mac .LeftSidebar__scroll-section::-webkit-scrollbar-button:hover,
+.scrollbar-style-visible-mac .LeftSidebar__scroll-section::-webkit-scrollbar-track:hover,
+.scrollbar-style-visible-windows .LeftSidebar__scroll-section::-webkit-scrollbar-button:hover, 
+.scrollbar-style-visible-windows .LeftSidebar__scroll-section::-webkit-scrollbar-track:hover
+{
+	background-color:var(--mainColor)!important;
+	border-radius: 10px;
+}
+/*
+*********************************************************************************************************
+header removal
+*********************************************************************************************************
+*/
+.Header__background,
+.Header__background-overlay,
+.Header__background-scroll-overlay,
+.Header__background-color,
+.Header--with-active-sticky-header .Header__background,
+.HomeHeader__hpto-top-bar,
+.Header__top-bar,
+.header
+{
+    background: transparent!important;
+    border: none;
+}
+.GlueHeader__background
+{
+	display: none;
+}
+.Header__background {
+    display: none!important;
+}
+.glue-page-header__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: none;
+}
+/*
+*********************************************************************************************************
+collection of main color
+*********************************************************************************************************
+*/
+.OfflineIndicator--is-downloaded
+{
+	color: var(--mainColor);
+	text-shadow: 0 0 10px var(--secondColor);
+}
+/*Active Selections*/
+.RootlistItem--is-active:before,
+.SidebarListItem--is-active:after
+{
+	background: var(--mainColor);
+	box-shadow: 0 0 10px var(--secondColor);
+}
+.button.button-green,
+.Button--style-green
+{
+	background: var(--mainColor)!important;
+	box-shadow: 0 0 10px var(--secondColor);
+}
+.button.button-green::hover
+{
+    background: var(--mainColor)!important;
+}
+.added .button-add:not(.button-icon-only):not(.button-icon-with-stroke), 
+.button-add.added:not(.button-icon-only):not(.button-icon-with-stroke)
+{
+	color: var(--mainColor);
+}
+/*
+*********************************************************************************************************
+Selected column
+*********************************************************************************************************
+*/
+.nav > li.active > a::after
+{
+	background: var(--mainColor);
+}
+/*
+*********************************************************************************************************
+currently playing playlist in profile
+*********************************************************************************************************
+*/
+.card.playing .card-info-title a, .card.paused .card-info-title a,
+.playing .card .card-info-title a, .paused .card .card-info-title a
+{
+	color: var(--mainColor);
+
+}
+.card-info-title a
+{
+	font-size: 20px;
+	font-weight: 900;
+	line-height: 43px;
+}
+.GlueHeader__top-bar
+{
+    background: transparent!important;
+}
+/*
+*********************************************************************************************************
+friendslist activity text
+*********************************************************************************************************
+*/
+/*Empty Friends List*/
+.EmptyFriendFeed__cta--bg-3,
+.EmptyFriendFeed__cta--bg-2,
+.EmptyFriendFeed__cta--bg-1
+{
+    background-image: none!important;
+}
+.friend .user .name
+	{
+		color: var(--mainColor);
+		font-weight: 900;
+		text-shadow: 0 0 10px var(--secondColor);
+	}
+	.friend .context, .friend .context a, .friend .song-artist, 
+	.friend .song-artist a, .friend .song-title, .friend .song-title a
+	{
+		color: #FFF;
+		font-weight: 900;
+		text-shadow: 0 0 10px var(--secondColor);
+	}
+/*
+*********************************************************************************************************
+added button
+*********************************************************************************************************
+*/
+	.added .button.button-icon-only.button-add,
+	.view-player .now-playing-container .nowplaying-add-button.added:before,
+	.spoticon-heart-active-16::before
+	{
+		color: var(--mainColor);
+		font-weight: 900;
+		text-shadow: 0 0 10px var(--secondColor);
+		font-size: var(--fontSize);
+	}
+/*
+*********************************************************************************************************
+music control buttons
+*********************************************************************************************************
+*/
+/*Active button, small circle*/
+.view-player .player-controls-container .button-repeat.active:after,
+.view-player .player-controls-container .button-shuffle.active:after
+{
+	background: var(--mainColor)!important;
+}
+.spoticon-repeat-16::before
+{
+	color: var(--mainColor);
+}
+.view-player .player-controls-container .controls .button-shuffle:before,
+.view-player .player-controls-container .controls .button-repeat:before
+{
+	color: #FFF;
+	font-weight: 900;
+	filter: drop-shadow(0 0 4px var(--secondColor));
+}
+.view-player .player-controls-container .controls .button-repeat.active, 
+.view-player .player-controls-container .controls .button-shuffle.active,
+.view-player .player-controls-container .controls .button-thumbs-down.active, 
+.view-player .player-controls-container .controls .button-thumbs-up.active
+{
+	color: var(--mainColor);
+}
+/*
+*********************************************************************************************************
+Explicit Label
+*********************************************************************************************************
+*/
+.TableCellSong__label,
+.tl-explicit .label, .tl-premium .label
+{
+    background: transparent;
+    border-radius: .25em;
+    border: none;
+    padding: 2px 6px;
+    background: var(--mainColor);
+    color: #FFF;
+    letter-spacing: 1.1px;
+	font-weight: 900;
+	filter: drop-shadow(0 0 4px var(--secondColor));
+}
+/*
+*********************************************************************************************************
+Nowplaying Player
+*********************************************************************************************************
+*/
+.view-player
+{
+	height: var(--playerHeight);
+}
+/*
+*********************************************************************************************************
+now playing bar & volume
+*********************************************************************************************************
+*/
+.view-player .extra-controls-container .volumebar-container .progress-bar-wrapper.active .inner,
+.view-player .extra-controls-container .volumebar-container:hover .inner{
+    background: var(--mainColor);
+    box-shadow: 0 0 20px var(--secondColor);
+}
+/*Progressbar non filled*/
+.progress-bar, .progress-bar .inner
+{
+	background: transparent;
+}
+.view-player .player-controls-container .progress-container .progress-bar .inner,
+.progress-bar .inner
+{
+background: var(--mainColor);
+box-shadow: 0 0 20px var(--secondColor);
+}
+.view-player .player-controls-container .progress-container.progress-bar-enabled.dragging-progress-bar .progress-bar.inner,
+.view-player .player-controls-container .progress-container.progress-bar-enabled:hover .progress-bar .inner
+{
+	background: var(--mainColor)!important;
+}
+/*Volume bar*/
+.view-player .extra-controls-container .volumebar-container .progress-bar .inner
+{
+	background: var(--mainColor);
+}/*
+*********************************************************************************************************
+nowplaying text in playlist
+*********************************************************************************************************
+*/
+.tracklist-album, .tracklist-chart, .tracklist-basic, .tracklist-playlist, 
+.tracklist-podcast, .tracklist-popular, .tracklist-station, .tracklist-queue, .tracklist-search
+{
+	font-weight: 900;
+	filter:drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+}
+
+/*
+*********************************************************************************************************
+Sidebar  titles
+*********************************************************************************************************
+*/
+html .SidebarList__title
+{
+	font-weight: 900!important;
+	color: var(--mainColor)!important;
+	background-image: linear-gradient(90deg, transparent, transparent), 
+					  linear-gradient(90deg, transparent, var(--mainColor), var(--secondColor), transparent)!important;
+	background-size: 100% 2px!important;
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+	text-align: center!important;
+	font-weight: 900!important;
+	transition: all 0.3s ease;
+	padding-bottom: 5px;
+	font-size: 20px;
+	text-shadow: 0 0 10px var(--secondColor)!important;
+}
+/*
+*********************************************************************************************************
+Sidebar Links
+*********************************************************************************************************
+*/
+.SidebarListItemLink:link, .SidebarListItemLink:visited
+{
+	font-weight: 900;
+	color: #FFF;
+	text-align: center!important;
+}
+/*
+*********************************************************************************************************
+Friendslist
+*********************************************************************************************************
+*/
+.section-divider
+{
+	font-weight: 900!important;
+	color: var(--mainColor)!important;
+	background-image: linear-gradient(90deg, transparent, transparent),
+		  			  linear-gradient(90deg, transparent, var(--mainColor), var(--secondColor), transparent)!important;
+	background-size: 100% 2px!important;
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+	text-align: right!important;
+	font-weight: 900!important;
+	transition: all 0.3s ease;
+
+	font-size: 20px;
+}
+/*
+*********************************************************************************************************
+Add Playlist icon
+*********************************************************************************************************
+*/
+.spoticon-plus-alt-24::before
+{
+	color: var(--mainColor)!important;
+}
+/*
+*********************************************************************************************************
+Current Song Header when Scrolling
+*********************************************************************************************************
+*/
+.glue-page-header--with-active-sticky-header .glue-page-header__sticky-inner
+{
+    padding-right: 14px;
+    margin-right: -17px;
+    padding-left: 14px;
+    margin-left: -31px;
+	margin-top: -2px;
+    background: rgba(0,0,0,0.75)!important;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+
+.sticky-clone .tl-header
+{
+	display:none;
+}
+.glue-page-header__content .glue-page-header__label
+{
+	color: var(--mainColor)!important;
+}
+.tl-row.selected .tl-cell,
+.tl-row.selected .tl-cell::hover
+{
+    background: transparent!important;
+
+}
+.added.current.locally-playable.offline-downloaded.playing.selected.selection-focus.thumbs-up.tl-row
+{
+    backdrop-filter: saturate(180%) blur(20px)!important;
+}
+/*
+*********************************************************************************************************
+Sliders
+*********************************************************************************************************
+*/
+.slider.enabled
+{
+	background:var(--mainColor)!important;
+}
+/*
+*********************************************************************************************************
+Friendslist Header Text Color
+*********************************************************************************************************
+*/
+/*Freindslist header & more*/
+.section-divider > *
+{
+	color: var(--mainColor);
+	text-align: right!important;
+}
+/*
+*********************************************************************************************************
+filter playlist
+*********************************************************************************************************
+*/
+.focus .h-search, .h-search:focus,
+/*Scrolled Searchbar*/
+.h-search-field-wrapper.sticky-top
+{
+	background: rgba(0,0,0,0.7);
+}
+/*Highlight Filtered Word*/
+.tl-filter-highlight
+{
+	background-color: var(--secondColor);
+	padding: 5px;
+	padding-right: 0px!important;
+	border-radius: 10px;
+	box-shadow: 0 0 6px var(--mainColor);
+}
+/*Searched song/Playlist song title padding*/
+.tl-cell__content
+{
+	padding: 5px;
+}
+
+/*Playlist Header*/
+.tl-header th
+{
+	font-weight: 900;
+	color: #FFF;
+	filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.5));
+	font-size: 15px;
+	border-bottom: 2px solid var(--borderColor)!important;
+}
+
+/*
+*********************************************************************************************************
+now playing buttons and others
+*********************************************************************************************************
+*/
+#view-now-playing {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    max-height: 452px;
+    /* padding-left: 13px; */
+    margin: 7px;
+    border-radius: 30px;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.45));
+}
+/*Large player*/
+.now-playing-large
+{
+    border:none!important;
+}
+/*Mini now playing*/
+.view-player .track a {
+    color: #fff;
+    font-weight: 900;
+}
+/*Song Title*/
+.view-player .now-playing.active {
+    filter: drop-shadow(3px 6px 6px black);
+    display: block;
+}
+/*Artist Title*/
+.view-player .artist a {
+    color: var(--mainColor);
+    font-weight: 900;
+}
+/*Skip and Previous Buttons*/
+.view-player .player-controls-container .controls .next,
+.view-player .player-controls-container .controls .previous {
+    height: 32px;
+    line-height: 30px;
+    color: var(--mainColor);
+    transition: none 33ms cubic-bezier(.3,0,.7,1);
+    width: 32px;
+}
+/*song timestamp*/
+.view-player .player-controls-container .progress-container .elapsed,
+.view-player .player-controls-container .progress-container .remaining {
+    color: #FFF;
+    font-size: 15px;
+    line-height: 11px;
+    width: 35px;
+    font-weight: 900;
+}
+/*
+*********************************************************************************************************
+bold fonts
+*********************************************************************************************************
+*/
+.glue-page-header__content .glue-page-header__meta-info,
+/*Playlist Name*/
+.glue-page-header__content .glue-page-header__title,
+/*Playlist Text*/
+.glue-page-header__content .glue-page-header__label,
+.glue-page-header__content .glue-page-header__count-label-text,
+.glue-page-header__content .glue-page-header__count-label-number
+{
+    font-weight: 900;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.glue-page-header__content .glue-page-header__count-label-text,
+.glue-page-header__content .glue-page-header__count-label-number
+{
+	color: #FFF;
+	font-size: 15px;
+}
+.friend .active-indicator, .friend .from-now {
+    color: #FFF;
+	font-weight: 900;
+	text-shadow: 0 2px 3px rgba(0,0,0,0.6)!important;
+}
+/*Add new playlist*/
+.LeftSidebarNewPlaylistButton__text
+{
+	font-weight: 900;
+	color: #FFF;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.6); 
+}
+.glue-page-header__top-bar {
+    background: transparent;
+}
+
+.glue-page-header__sticky .glue-page-header__title-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+/*Search Bar*/
+.spoticon-search-16::before
+{
+	color: var(--mainColor);
+	font-weight: 900;
+}
+.h-search
+{
+	font-weight: 900;
+	opacity: 1!important;
+	color: #FFFFFF!important;
+}
+
+/*Popup window modual*/
+.Modal__content
+{
+	background:linear-gradient(to bottom, rgba(0, 0, 0, var(--topValue)) 0%,
+	rgba(0, 0, 0, var(--bottomValue)) 100%), 
+	var(--containerBackground)!important;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	padding: 50px;
+    border-radius: 30px;
+    background-position: top center!important;
+}
+
+.PlaylistAnnotationModal__img-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.PlaylistAnnotationModal__img
+{
+	background:transparent;
+}
+/*usermodual text area*/
+.PlaylistAnnotationModal__playlist-description-textarea,
+.PlaylistAnnotationModal__playlist-name-input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+	background: transparent;
+	color: #FFF!important;
+	font-weight: 900!important;
+	border-radius: 10px!important;
+	margin-top: 0px;
+}
+
+/*usermodual text area header*/
+.PlaylistAnnotationModal__playlist-name-label,
+.PlaylistAnnotationModal__playlist-description-label
+{
+	font-weight: 900;
+	font-size: 25px;
+	color: var(--mainColor);
+}
+
+/*usermodual text area removal*/
+.PlaylistAnnotationModal__title
+{
+	display: none;
+}
+/*Padding*/
+.view-player .player-bar-wrapper::before {
+    content: "Orbit " var(--version-content);
+    position: absolute;
+    top: 105px;
+    left: 15px;
+    font-size: 12px;
+    color: #FFF;
+    font-weight: 900;
+    opacity: 0.6;
+}
+/*ad remove*/
+#view-leaderboard-ad #leaderboard-ad-wrapper
+{
+    display: none;
+}
+/*Song Lsit Tabel*/
+.TableRow--is-selected
+{
+    background: rgba(0,0,0,0.6);
+    border: 2px solid var(--mainColor);
+    box-shadow: 0 2px 3px var(--secondColor);
+    border-radius: 15px!important;
+}
+/*current playing text*/
+.TableCellSong--track-is-playing .TableCellSong__featuredArtist, 
+.TableCellSong--track-is-playing .TableCellSong__text-truncator, 
+.TableCellSong--track-is-playing .TableCellSong__track-name,
+/*current song in list*/
+.tl-row.current .tl-highlight
+{
+    color: #fff!important;
+    font-weight: 900;
+    font-size: 22px;
+    text-shadow: 0 0 10px var(--mainColor);
+}
+.tl-row.current .tl-cell:not(.tl-number), .tl-row.current .tl-cell a:link
+{
+    color:#FFF;
+}
+/*current song in list hover*/
+.tl-row.current .tl-highlight::hover
+{
+    color:#FFF!important;
+}
+.Header__image-inner {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    border-radius: 25px;
+}
+
+/*
+
+.tl-row.current .tl-cell:not(.tl-number), .tl-row.current .tl-cell a:link, .tl-row.current .tl-highlight
+{
+	color: var(--mainColor)!important;
+}
+*/
+/*
+*********************************************************************************************************
+keyframe animations
+*********************************************************************************************************
+*/
+.body-container--rtl-off.body-container--windows.flex-col-container.scrollbar-style-visible-windows.with-buddy-list::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    letter-spacing: 5px;
+    color: var(--mainColor);
+    font-size: 80px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 100vh;
+    opacity: 0;
+    text-shadow: 5px 4px 20px rgba(0,0,0,1)!important;
+    filter:drop-shadow(5px 5px 20px rgba(0,0,0,1))!important;
+    z-index: 9999;
+    pointer-events: none;
+    animation: initialize-bg 7s;
+    /* animation-iteration-count: infinite; */
+  }
+   @keyframes initialize-bg {
+       0% {
+           content: var(--themeName) var(--version-content);
+           -webkit-transform: scale(.7);
+           transform: scale(.7);
+      }
+       10% {
+           opacity: 0;
+           -webkit-transform: scale(.7);
+           transform: scale(.7);
+      }
+       15% {
+           opacity: 1;
+           -webkit-transform: scale(1);
+           transform: scale(1);
+      }
+       25% {
+           opacity: 1;
+           -webkit-transform: scale(1);
+           transform: scale(1);
+      }
+       29% {
+           content: var(--themeName) var(--version-content);
+           opacity: 0;
+           -webkit-transform: scale(1.3);
+           transform: scale(1.3);
+      }
+       34% {
+           content: "Please do not redistribute this file."; 
+           opacity: 0;
+           -webkit-transform: scale(.7);
+           transform: scale(.7);
+      }
+       40% {
+           opacity: 1;
+           -webkit-transform: scale(1);
+           transform: scale(1);
+      }
+       55% {
+           opacity: 1;
+           -webkit-transform: scale(1);
+           transform: scale(1);
+      }
+       59% {
+           content: "Please do not redistribute this file."; 
+           opacity: 0;
+           -webkit-transform: scale(1.3);
+           transform: scale(1.3);
+      }
+       60% {
+           content:var(--watermark);
+           opacity: 0;
+           -webkit-transform: scale(.7);
+           transform: scale(.7);
+      }
+       65% {
+           opacity: 1;
+           -webkit-transform: scale(1);
+           transform: scale(1);
+      }
+       77% {
+           -webkit-transform: scale(1);
+           transform: scale(1);
+           opacity: 1;
+      }
+       83% {
+           opacity: 0;
+      }
+       100% {
+           content: var(--watermark);
+           -webkit-transform: scale(.6);
+           transform: scale(.6);
+           opacity: 0;
+      }
+  }

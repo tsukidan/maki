@@ -70,7 +70,8 @@ Theme Settings
   --bottomValue        : 0.6;                                    /* Darkness value for bottom gradient   */
   --fontSize           : 16px;                                   /* Font size for the user's username    */
   --messageSpacing     : 35px;                                   /* Amount of space between messages     */
-                                                                 /* Use lower values = more compact      */
+  --reactionSize       : 30px; 
+                                                                  /* Use lower values = more compact      */
   --avatarSize         : 50px;                                   /* Avatar Size                          */
   --profileSize        : 80px;                                   /* Profile Avatar Size                  */
   --avatarRound        : 50%;                                    /* Avatar roundness 50% Circle.         */

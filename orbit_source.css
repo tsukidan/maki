@@ -3,7 +3,7 @@
 *********************************************************************************************************
 Orbit
 Author       : Sake#0009
-version      : 1.4.7
+version      : 1.5
 *********************************************************************************************************
 */
 
@@ -216,6 +216,8 @@ User Profiles
 {
     margin: -50px;
     background: rgba(0,0,0,0.4)!important;
+    width: 540px;
+    min-width: 400px;
 }
 /*
 
@@ -249,13 +251,12 @@ User Profiles
 /*using top and bottom values for the main gradient over the picture*/
 .backdrop-1wrmKB, .backdropWithLayer-3_uhz4
 {
-    background: rgba(0,0,0,0.25)!important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), var(--mainBackground)!important;
     background-repeat: no-repeat!important;
     background-position: right center!important;
     background-size: cover!important;
-    backdrop-filter: blur(10px) saturate(140%);
-    opacity: 1!important;
-    transition : -webkit-backdrop-filter 2s ease-in-out;
+
+
 }
 /*Border Removal*/
 .tabBarContainer-1s1u-z
@@ -543,10 +544,7 @@ Avatars & Main Chat/ chat message
     background: transparent;
 }
 */
-.mention-1f5kbO
-{
-    background: var(--mainColor);
-}
+
 
 /* DON'T TOUCH */
 .theme-dark .dividerEnabled-2TTlcf {
@@ -705,7 +703,7 @@ Emojis
 {
   height: var(--emojiSize);
   width : var(--emojiSize);
-  transition: 0.7s all ease-in-out;
+  transition: 0.55s all var(--bounce);
 }
 .emoji.jumboable:hover, .emoji:hover
 {
@@ -751,11 +749,11 @@ Reaction Size Fix For Emoji
 }
 .reaction-1hd86g .emoji
 {
-  height: calc(var(--emojiSize) - 10%)!important;
-  width: calc(var(--emojiSize) - 10%)!important;
+  height: calc(var(--reactionSize) - 10%)!important;
+  width: calc(var(--reactionSize) - 10%)!important;
   margin: .5rem 0;
   transition: 0.7s all ease-in-out;
-  max-width: var(--emojiSize)!important;
+  max-width: var(--reactionSize)!important;
 }
 .reactionCount-2mvXRV
 {
@@ -787,11 +785,6 @@ text-align: right!important;
 {
     background: rgba(0,0,0,0.4);
 }
-.reaction-1ELvT8
-{
-    width: calc(var(--emojiSize) + 20px);
-    height: calc(var(--emojiSize) + 0px);
-}
 /*
 *********************************************************************************************************
 Main Background code
@@ -805,6 +798,7 @@ Main Background code
     background-position: right!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
+
 }
 /*
 *********************************************************************************************************
@@ -863,7 +857,7 @@ Variables
 */
 :root 
 {
-  --version-content : " 1.4.7";
+  --version-content : " 1.5";
   --themeName       : "Orbit";
   --watermark       :  " ";
 
@@ -887,7 +881,10 @@ Settings
     --sBackground: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%),
                    var(--settingsBackground); 
     /* Overall Main Settings Background */ 
-/*
+
+--bounce: cubic-bezier(.45,-0.65,.55,2);
+--bounce2: cubic-bezier(.35,.1,.25,1.65);
+    /*
 *********************************************************************************************************
 radial status
 *********************************************************************************************************
@@ -951,22 +948,21 @@ folder icons
     height: calc( 100% - 48px);
     min-width: unset
 }
-.membersWrap-2h-GB4:hover {
-    height: calc( 100% - 148px);
-}
 .members-1998pB{
-    max-width: unset;
-    width: 70px;
-    transition: .6s ease;
+    width: 76px;
+    opacity: 0.5;
+    transition: all .5s var(--bounce2);
+    border-radius: 30px;
 }
 .members-1998pB:hover {
-    width: 270px;
+    width: 450px!important;
     background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%), var(--settingsBackground);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 30px 0 0 30px;
-
+    background-position:left center;
+    border-radius: 30px;
+    opacity: 1;
+    height: 100%!important;
 }
 .member-3W1lQa:hover
 {
@@ -974,19 +970,17 @@ folder icons
 }
 
 .theme-dark .members-1998pB .membersGroup-v9BXpm {
-    color: var(--mainColor)!important;
     text-transform: uppercase;
     text-align: left;
-    background: rgba(0,0,0,0);
     border-radius: 3px;
-    padding: 10px;
-    margin: 5px auto;
+    background:transparent;
     display: none;
     min-width: 10px;
     height: 20px;
     font-weight: 900;
     font-size: 14px;
     filter: drop-shadow(0 4px 10px #000);
+    color: var(--mainColor)!important;
 }
 .members-1998pB:hover .membersGroup-v9BXpm {
     display: block;
@@ -1043,7 +1037,7 @@ folder icons
 /*Activity Text*/
 .activity-3mKQ-i, .activityText-OW8WYb, .activity-2Gy-9S
 {
-    color:var(--secondColor);
+    color:#FFF;
     font-weight: 900;
 }
 /*
@@ -1185,6 +1179,7 @@ embed edits
     background-repeat: no-repeat;
     border-radius: 15px;
     background-position: center;
+    margin-left: 40px;
 }
 
 /*new smart embeds*/
@@ -1348,7 +1343,6 @@ Friendslist names, etc.
 }
 .name-uJV0GL
 {
-    color: var(--mainColor);
     font-weight: var(--boldTextSize);
 }
 /*Friendslist Searchbar*/
@@ -1479,6 +1473,7 @@ Usernames in chat, main chat font, and guild channels, Divider Settings
     font-weight: var(--mainTextSize)!important;
     font-size: calc(var(--fontSize) - 3px);
 }
+
 .container-3FojY8
 {
     margin-top: -5px;
@@ -2378,7 +2373,7 @@ Stream background removal
 }
 .avatarSmall-2CW6I1
 {
-    transition: 0.3s all ease-in-out;
+    transition: 400ms all var(--bounce);
     height: 28px;
     width: 28px;
 }
@@ -2576,6 +2571,60 @@ border-radius: 10px;
 #bd-pub-button, #bd-pub-li
 {
     display:none;
+}
+.theme-dark .message-2qRu38
+{
+    background:none;
+    border: none;
+    box-shadow: none;
+
+}
+
+.message-2qRu38,
+.messages-3G3erD .messageContainer-1ei2zM:first-of-type .message-2g38UB
+{
+    padding-bottom:var(--avatarSize);
+}
+.message-2g38UB.groupStart-23k01U.wrapper-2a6GCs.cozy-3raOZG.zalgo-jN1Ica .avatar-1BDn8e,
+.message-2DieIs.wrapper-2a6GCs.cozy-3raOZG.zalgo-jN1Ica .avatar-1BDn8e
+{
+    height: 50px!important;
+    width: 50px!important;
+}
+.message-2g38UB.groupStart-23k01U.wrapper-2a6GCs.cozy-3raOZG.zalgo-jN1Ica,
+.message-2DieIs.wrapper-2a6GCs.cozy-3raOZG.zalgo-jN1Ica
+{
+    padding-bottom: 10px;
+}
+.message-2DieIs.wrapper-2a6GCs.cozy-3raOZG.zalgo-jN1Ica .contents-2mQqc9
+{
+    margin-left: -30px!important;
+}
+/*new emoji picker*/
+.drawerSizingWrapper-17Mss4,
+.emojiPicker-3PwZFl, .contentWrapper-2txmjs
+{
+   background:  linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%), var(--profileBackground)!important;
+   border-radius: 25px;
+}
+.inspector-sdLnLS
+{
+    background: transparent;
+}
+.header-8ilj5e
+{
+    box-shadow: none;
+}
+
+.header-ywPcAE
+{
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+}
+.header-19cWci
+{
+    color: #FFF;
 }
 /*
 *********************************************************************************************************

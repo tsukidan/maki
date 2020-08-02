@@ -1,4 +1,4 @@
-//META{"name":"Orbit CSS","description":"Theme for my friends.","author":"Sake#0009","version":"1.4"}*//
+//META{"name":"Orbit","description":"Theme for my friends.","author":"Sake#0009","version":"1.5.100"}*//
 /*
    ____       _     _ _   
   / __ \     | |   (_) |  
@@ -10,7 +10,117 @@
 */
 /*
 *********************************************************************************************************
-DISCLAIMER: This theme is meant for personal use and use for my friends.
+@IMPORTS - used to import the code required for the theme to work. do not remove these or it will break
+            your theme file.
+         - Replace the serverlist link (not the orbit.css one) with the serverlist style you want to use.
+*********************************************************************************************************
+*/
+@import url('https://combinatronics.com/Sakezone/orbit/master/orbit_source.css');
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css');
+
+:root
+{
+/**********************************************************************************************************
+ Horizontal SeverList:
+------------------------------------------------------------------------------------------------------
+@import url("https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/base.css");
+
+Vertical ServerList:
+------------------------------------------------------------------------------------------------------
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css');
+
+**********************************************************************************************************/
+/*
+*********************************************************************************************************
+Theme Settings - Images and Colors:
+PLACE THE IMAGE LINK BETWEEN THE QUOTES, HIGHLIGHT EVERYTHING IN QUOTES THEN PASTE.               
+MAIN COLOR MUST BE A HEXCODE VALUE, YOU CAN FIND A COLOR WHEEL ON GOOGLE.
+YOU CAN ALSO USE RGB OR RBGA VALUES.
+*********************************************************************************************************
+*/
+/*
+*********************************************************************************************************
+Main Background and settings
+*********************************************************************************************************
+*/
+--homeIcon           : url(""); /* Discord Icon on top left               */
+--mainBackground     : url(""); /* Main Discord Background                */
+--topValue           : 0.35;                                   /* Darkness value for top main gradient   */
+--bottomValue        : 0.65;                                   /* Darkness value for bottom main gradient*/
+/*
+*********************************************************************************************************
+Coloring
+*********************************************************************************************************
+*/
+  --mainColor          : #fdb1ce;                              /* Main Accent color of the theme       */ 
+  --secondColor        : #e983b6;                              /* Secondary Accent color of the theme  */ 
+  --unreadColor        : var(--mainColor);                       /* Unread Color for guild notifs        */
+/*
+*********************************************************************************************************
+Portrait Oriented Images and Settings
+    These images are ones that have the same aspect ratio as something like your phone. Images aligned
+    in a portrait aspect ratio will show up better than widescreen or anything else.
+*********************************************************************************************************
+*/
+  --userPopout         : url(""); /* Image for User Popout               */
+  --settingsBackground : url(""); /* Settings Sidebar Image              */
+  --contextMenu        : url(""); /* Menu when you rightclick on discord */
+  --topPortraitValue   : 0.4;                                    /* Darkness value for top gradient     */
+  --botPortraitValue   : 0.65;                                   /* Darkness value for bottom gradient  */
+ /*
+*********************************************************************************************************
+Horizontal (Widescreen/ 16:9) Oriented Images and Settings
+    These images are like your main background if you use a widescreen monitor.
+*********************************************************************************************************
+*/
+  --profileBackground  : url(""); /* Image for view profile menu        */
+  --mentionPopup       : url(""); /* Menu that pops up when you mention */
+  --topHorizontalValue : 0.3;                                    /* Darkness value for top gradient    */
+  --botHorizontalValue : 0.65;                                   /* Darkness value for bottom gradient */
+/*
+*********************************************************************************************************
+Theme Setting: Sizing
+    Sizes of emojis, react emojis, avatar sizing, and other options.
+*********************************************************************************************************
+*/
+/* Emojis */
+  --emojiSize          : 50px;                                   /* Size of the static emojis in chat    */
+  --emojiHoverSize     : 80px;                                   /* Size of an emoji when hovering on it */
+  --reactionSize       : 30px;                                   /* Size of the reaction emojis          */ 
+/* Fonts */
+  --fontSize           : 16px;                                   /* Font size for the user's username    */
+  --messageSpacing     : 35px;                                   /* Amount of vertical space between messages*/
+                                                                 /* Using higher values = more compact      */
+/*Avatars*/
+  --avatarSize         : 70px;                                   /* Avatar Size                          */
+  --profileAvatarSize  : 150px;                                  /* Profile Avatar Size                  */
+  --avatarRound        : 50%;                                    /* Avatar roundness; 50% = Circle.      */
+
+/*
+*********************************************************************************************************
+Theme Settings: Columns & Rows/ Vertical & Horizontal Server List options
+*********************************************************************************************************
+*/
+/*
+Vertical(Columns) ServerList Options:
+Only change this if you are using the vertical serverlist.
+*/
+  --columns            : 2;	                                     /* amount-servercolumns default: 2      */
+  --guildsize          : 50;                                     /* pixel-serversize default: 50         */
+  --aligndms           : 0;	                                     /* should DMs be aligned in columns:    */
+                                                                 /* 0 = no, 1 = yes                      */
+  --round              : 50%;	                                 /* Roundness for guilds & borders       */
+/*
+Horizontal(Row) ServerList Options
+Only change this if you are using the horizontal serverlist.
+*/
+  --HSL-server-icon-size: 50px;  /* Size of the server icons | DEFAULT: 40px */
+  --HSL-server-spacing: 10px;    /* Spacing between each server icon | DEFAULT: 10px */
+}
+
+/*
+*********************************************************************************************************
+DISCLAIMER: This theme is meant for personal use and for my friends.
             I have made this in honor of my friends, my puppy who passed away, and in general to better
             familiarze myself with css.
 
@@ -18,69 +128,17 @@ DISCLAIMER: This theme is meant for personal use and use for my friends.
             theme over the past few years in order to bring a better experience to you guys and myself.
 
             Thank you - Sake#0009
-*********************************************************************************************************
-*/
-/*
-*********************************************************************************************************
-@IMPORTS - used to import the code required for the theme to work. do not remove these or it will break
-            your theme file.
-            
+
+@Import Credits:
+        -----------------------------------------------------------------------------------------------------
         @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css');
            mwittrien.github.io - Server columns
-
-        non-@imports
+           OR
+        @import url("https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/base.css");
+            gibbu.github.io - Horizontal Serverlist
+        ----------------------------------------------------------------------------------------------------- 
+        
+        non-@imports credits:
            Laxr#2405 - compact user list
 *********************************************************************************************************
 */
-@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css');
-@import url('https://combinatronics.com/Sakezone/orbit/master/orbit_source.css');
-:root
-{
-/*
-    @imports to copy:
-
-    Horizontal SeverList:
-    ------------------------------------------------------------------------------------------------------
-    @import url("https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/base.css");
-
-    Vertical ServerList:
-    ------------------------------------------------------------------------------------------------------
-    @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css');
-    
-*/
-/*
-*********************************************************************************************************
-Theme Settings
-*********************************************************************************************************
-*/
-/*     PLACE THE IMAGE LINK BETWEEN THE QUOTES, HIGHLIGHT EVERYTHING IN QUOTES THEN PASTE.               */
-/*     MAIN COLOR MUST BE A HEXCODE VALUE, YOU CAN FIND A COLOR WHEEL FOR THAT ON GOOGLE.                */
-  --mainBackground     : url(""); /* Main Discord Background              */
-  --settingsBackground : url(""); /* Settings Sidebar Image               */
-  --userPopout         : url(""); /* Image for User Popout                */
-  --homeIcon           : url(""); /* Discord Icon on top left             */
-  --profileBackground  : url(""); /* Image for view profile menu          */
-  --contextMenu        : url(""); /* Menu when you rightclick on discord  */
-  --mainColor          : #f85252;                              /* Main Accent color of the theme       */ 
-  --secondColor        : #ac0d0d;                              /* Secondary Accent color of the theme  */ 
-  --unreadColor        : var(--mainColor);                       /* Unread Color for guild notifs        */
-  --emojiSize          : 50px;                                   /* Size of the static emojis in chat    */
-  --emojiHoverSize     : 70px;                                   /* Size of an emoji when hovering on it */
-  --topValue           : 0.3;                                    /* Darkness value for top gradient      */
-  --bottomValue        : 0.6;                                    /* Darkness value for bottom gradient   */
-  --fontSize           : 16px;                                   /* Font size for the user's username    */
-  --messageSpacing     : 35px;                                   /* Amount of space between messages     */
-  --reactionSize       : 30px; 
-                                                                  /* Use lower values = more compact      */
-  --avatarSize         : 50px;                                   /* Avatar Size                          */
-  --profileSize        : 80px;                                   /* Profile Avatar Size                  */
-  --avatarRound        : 50%;                                    /* Avatar roundness 50% Circle.         */
-  --columns            : 1;	                                     /* amount-servercolumns default: 2      */
-  --guildsize          : 50;                                     /* pixel-serversize default: 50         */
-  --aligndms           : 0;	                                     /* should DMs be aligned in columns:    */
-                                                                 /* 0 = no, 1 = yes                      */
-  --round              : 50%;	                                 /* Roundness for guilds & borders       */
-  /*use these if you are using horizontal server lists*/
-  --HSL-server-icon-size: 50px;  /* Size of the server icons | DEFAULT: 40px */
-  --HSL-server-spacing: 10px;  /* Spacing between each server icon | DEFAULT: 10px */
-}

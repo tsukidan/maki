@@ -3,19 +3,71 @@
 *********************************************************************************************************
 Orbit
 Author       : Sake#0009
-version      : 1.5
 *********************************************************************************************************
 */
+/*
+*********************************************************************************************************
+Un-modifiable root
+*********************************************************************************************************
+*/
+:root 
+{
+/*
+*********************************************************************************************************
+String Variables
+*********************************************************************************************************
+*/
+  --version-content : " 1.5.122";
+  --themeName       : "Orbit";
+  --watermark       :  " ";
 
+/*
+*********************************************************************************************************
+Variables for text and shadows
+*********************************************************************************************************
+*/
+  --mainTextSize        : 600;
+  --dropShadowValue     : 0 2px 3px rgba(0,0,0,0.5);
+  --dropShadowValueDark : 0 1px 2px rgba(0,0,0,0.95);
+  --statusShadowValue   : 0 0 8px;
+  --boldTextShadow      : 0 2px 3px rgba(0,0,0,0.5)!important;
+  --boldTextSize        : 900!important;
+  --boldTextColor       : #fff!important;
+/*
+*********************************************************************************************************
+Animations
+*********************************************************************************************************
+*/
+  --bounce: cubic-bezier(.45,-0.65,.55,2);
+  --bounce2: cubic-bezier(.35,.1,.25,1.65);
+}
 /*
 *********************************************************************************************************
 Settings Page
 *********************************************************************************************************
 */
+.input-cIJ7To
+{
+    color: #FFF!important;
+}
+/*Settings Roles*/
+.roleInner-1C_Scc
+{
+    font-weight: 900!important;
+    text-shadow: 0 0 1px rgba(0,0,0,0.85);
+}
+.inputDefault-_djjkz.input-cIJ7To.da-inputDefault.da-input
+{
+    font-weight: 900;
+    text-shadow: 0 0 1px rgba(0,0,0,0.85);
+    border: none;
+    backdrop-filter: blur(20px);
+}
 /*Settings Background*/
 .theme-dark .sidebarRegion-VFTUkN
 {
-    background: var(--sBackground);
+    background: linear-gradient(to bottom, rgba(0,0,0,var(--topPortraitValue)) 0%, rgba(0,0,0,var(--botPortraitValue)) 100%),
+    var(--settingsBackground); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat!important;
@@ -54,24 +106,7 @@ Settings Page
         border-radius: 30px;
 
     }
-    /*Titles*/
-    .theme-dark .h5-18_1nd
-    {
-        font-weight: 900;
-        color:var(--boldTextColor);
-        font-size: var(--fontSize);
-        background-image: linear-gradient(90deg, transparent, transparent), 
-                          linear-gradient(90deg, transparent, var(--mainColor),
-                                          var(--secondColor), transparent)!important;
-        background-size: 100% 2px!important;
-        /* This get flipped.*/
-         background-position: 0 0, 0 100%;
-        /* The last argument gets flipped.*/
-         background-repeat: no-repeat;
-        text-align: left!important;
-        transition: all 0.3s ease;
-        padding-bottom: 10px;
-        }
+
     /*Option Titles Under Privacy*/
     .title-3BE6m5
     {
@@ -184,8 +219,8 @@ User Profiles
 /*User Profile Avatars*/
 .avatar-3EQepX
 {
-    height: var(--profileSize)!important;
-    width: var(--profileSize)!important;
+    height: var(--profileAvatarSize)!important;
+    width: var(--profileAvatarSize)!important;
 }
     /*User Profile Avatar Box-shadow*/
     .avatar-3EQepX
@@ -197,6 +232,7 @@ User Profiles
 {
     background: transparent;
 }
+
 /*Transparency Edits*/
 .theme-dark .topSectionNormal-2-vo2m, .theme-dark .body-3ND3kc
 {
@@ -205,7 +241,7 @@ User Profiles
 
 .inner-1ilYF7
 {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), var(--profileBackground)!important;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, var(--topHorizontalValue)) 0%, rgba(0, 0, 0, var(--botHorizontalValue)) 100%), var(--profileBackground)!important;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px;
@@ -239,8 +275,9 @@ User Profiles
 /*Connected Accounts*/
 .theme-dark .connectedAccount-36nQx7
 {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.35);
     border-radius: 15px;
+    backdrop-filter: saturate(180%) blur(20px);
 }
 .userInfoSectionHeader-CBvMDh, .connectedAccountName-f8AEe2
 {
@@ -253,7 +290,7 @@ User Profiles
 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), var(--mainBackground)!important;
     background-repeat: no-repeat!important;
-    background-position: right center!important;
+    background-position: center!important;
     background-size: cover!important;
 
 
@@ -306,15 +343,32 @@ Quick Switcher
 */
 .quickswitcher-3JagVE
 {
-    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), 
-                                                          var(--profileBackground)!important;
+    background:transparent;
     background-size: cover!important;
     background-repeat: no-repeat!important;
+    box-shadow: none!important;
+    width: 650px;
+    margin-left: -40px;
+}
+.contentDefault-16dKSY
+{
+    color: #FFF;
+}
+.note-S--UP5,
+.misc-1CT3G7
+{
+    color: var(--mainColor)!important;
+    font-weight: 900!important;
+    opacity: 1!important;
 }
     /*Search Bar*/
     .theme-dark .input-2VB9rf
     {
-        background: rgba(0,0,0,0.5);
+        background: transparent;
+        box-shadow:none;
+        font-weight: 900;
+        color:#FFF;
+        font-size: 35px;
     }
         /*Font For Usernames*/
         .username-1A8OIy
@@ -345,7 +399,7 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
 /*Search Suggestions*/
 .resultsGroup-r_nuzN 
 {
-    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), var(--profileBackground)!important;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, var(--topHorizontalValue)) 0%, rgba(0, 0, 0, var(--botHorizontalValue)) 100%), var(--profileBackground)!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
 }
@@ -435,11 +489,18 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
 .styleFixed-sX-yHV,
 .container-enaOkj
 {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), var(--userPopout);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, var(--topPortraitValue)) 0%, rgba(0, 0, 0, var(--botPortraitValue)) 100%), var(--userPopout);
     background-size: cover!important;
     background-position: center!important; 
     border-radius: 15px;
     max-width: 550px;
+    margin-top: -75px;
+    box-shadow: 0 20px 50px #000;
+}
+.searchResultsWrap-3-pOjs,.styleFixed-sX-yHV,
+.container-enaOkj
+{
+    margin-top: 0px;
 }
     /*@ Mentions Header*/
     .theme-dark .header-ykumBX, .theme-dark .messageGroupWrapper-o-Zw7G
@@ -492,6 +553,15 @@ Avatars & Main Chat/ chat message
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 999999;
+    transition: all 400ms var(--bounce);
+    border-radius: var(--avatarRound);
+}
+.avatar-1BDn8e:hover{
+    width: calc(var(--avatarSize) + 25px)!important;
+    height:calc(var(--avatarSize) + 25px)!important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 9999999;
 }
 /* DON'T TOUCH */
 .containerCozyBounded-1rKFAn 
@@ -703,7 +773,7 @@ Emojis
 {
   height: var(--emojiSize);
   width : var(--emojiSize);
-  transition: 0.55s all var(--bounce);
+  transition: 400ms all var(--bounce);
 }
 .emoji.jumboable:hover, .emoji:hover
 {
@@ -795,7 +865,7 @@ Main Background code
     background: linear-gradient(to bottom,  rgba(0,0,0,var(--topValue)) 0%,
                                             rgba(0,0,0,var(--bottomValue)) 100%), 
                                             var(--mainBackground)!important;
-    background-position: right!important;
+    background-position: center!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
 
@@ -850,56 +920,7 @@ display:none;
   background-repeat: no-repeat!important;
   background-size: cover!important;
 }
-/*
-*********************************************************************************************************
-Variables
-*********************************************************************************************************
-*/
-:root 
-{
-  --version-content : " 1.5";
-  --themeName       : "Orbit";
-  --watermark       :  " ";
 
-/*
-*********************************************************************************************************
-Variables for text and shadows
-*********************************************************************************************************
-*/
-  --mainTextSize        : 600;
-  --dropShadowValue     : 0 2px 3px rgba(0,0,0,0.5);
-  --dropShadowValueDark : 0 1px 2px rgba(0,0,0,0.95);
-  --statusShadowValue   : 0 0 8px;
-  --boldTextShadow      : 0 2px 3px rgba(0,0,0,0.5)!important;
-  --boldTextSize        : 900!important;
-  --boldTextColor       : #fff!important;
-/*
-*********************************************************************************************************
-Settings
-*********************************************************************************************************
-*/
-    --sBackground: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%),
-                   var(--settingsBackground); 
-    /* Overall Main Settings Background */ 
-
---bounce: cubic-bezier(.45,-0.65,.55,2);
---bounce2: cubic-bezier(.35,.1,.25,1.65);
-    /*
-*********************************************************************************************************
-radial status
-*********************************************************************************************************
-*/
-    --rs-small-spacing: 0px;  /* spacing between avatar and status */
-    --rs-large-spacing: 0px;  /* spacing between avatar and status for user popouts & modals/profiles */
-    --rs-width: 3px;  /* Width/thickness of status border */
-    --rs-avatar-shape: 50%;  /* 50% for round - 0% for square */
-    --rs-online-color: #43b581;  /* color for online status */
-    --rs-idle-color: #faa61a;  /* color for idle status */
-    --rs-dnd-color: #f04747;  /* color for dnd status */
-    --rs-offline-color: #636b75;  /* color for offline status */
-    --rs-streaming-color: #643da7;  /* color for streaming status */
-    --rs-invisible-color: #747f8d;  /* color for invisible status - Note this will only show for your own invisibility */
-}
 
 /*UNREAD BADGES*/
 .numberBadge-2s8kKX.base-PmTxvP.da-numberBadge.da-base
@@ -922,6 +943,11 @@ radial status
 #app-mount .listItem-2P_4kh .numberBadge-2s8kKX {
     border-radius: var(--round)!important;
 }
+.icon-27yU2q
+{
+    border-radius: var(--round)!important;
+}
+
 /*Guild Borders Within Server Folders*/
 /*
 *********************************************************************************************************
@@ -951,12 +977,12 @@ folder icons
 .members-1998pB{
     width: 76px;
     opacity: 0.5;
-    transition: all .5s var(--bounce2);
+    transition: all 600ms var(--bounce2);
     border-radius: 30px;
 }
 .members-1998pB:hover {
     width: 450px!important;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%), var(--settingsBackground);
+    background: linear-gradient(to bottom, rgba(0,0,0,var(--topPortraitValue)) 0%, rgba(0,0,0,var(--botPortraitValue)) 100%), var(--settingsBackground);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:left center;
@@ -1174,12 +1200,11 @@ embed edits
 /*new embeds*/
 .grid-1nZz7S
 {
-    background:linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), var(--profileBackground);
+    background:linear-gradient(to bottom, rgba(0,0,0,var(--topHorizontalValue)) 0%, rgba(0,0,0,var(--botHorizontalValue)) 100%), var(--profileBackground);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px;
     background-position: center;
-    margin-left: 40px;
 }
 
 /*new smart embeds*/
@@ -1288,7 +1313,7 @@ background:transparent;
   background-position: 0 0, 0 100%;
  /* The last argument gets flipped.*/
   background-repeat: no-repeat;
-  text-align: left!important;
+  text-align: center!important;
   font-weight: 900!important;
   transition: all 0.3s ease;
   padding-bottom: 3px;
@@ -1337,13 +1362,21 @@ Friendslist names, etc.
   opacity: 1!important;
 }
 /*Friendlist Icons - 1.0.2 - 9/5/2019*/
-.channel-2QD9_O .linkButtonIcon-Mlm5d6
+.channel-2QD9_O .linkButtonIcon-Mlm5d6,
+.headerText-2F0828
 {
     color: var(--mainColor);
 }
 .name-uJV0GL
 {
     font-weight: var(--boldTextSize);
+    color: #FFF;
+}
+
+.subtext-1RtU34,
+.text-3MU_QQ
+{
+    color: var(--mainColor);
 }
 /*Friendslist Searchbar*/
 .searchBar-6Kv8R2
@@ -1379,7 +1412,7 @@ Friendslist names, etc.
 /*Friends Search*/
 .input-1Rv96N
 {
-    background: rgba(255, 255, 255, 0.75);
+    color: #FFF!important;
     border-radius: 10px;
 }
 
@@ -1547,7 +1580,7 @@ Emoji/Mention backdrop
 */
 .autocompleteInner-zh20B_
 {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.7) 100%), var(--profileBackground);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.7) 100%), var(--mentionPopup);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1904,7 +1937,10 @@ Canary Changes - 9/9/19
     opacity: 1!important;
 }
 
-
+.searchBar-6Kv8R2 .searchBarComponent-32dTOx
+{
+    color: #FFF;
+}
 /*
 *********************************************************************************************************
 General Changes - 9/11/19
@@ -2013,7 +2049,7 @@ display: none;
     filter:blur(0px);
 }
 /*Input Fields within Settings*/
-.input-cIJ7To, .css-15ejc46-control, .css-2yldzf-control, .css-1yegjoj-control,
+ .css-15ejc46-control, .css-2yldzf-control, .css-1yegjoj-control,
 .theme-dark .container-1nZlH6
 {
     background: rgba(0,0,0,0.8);
@@ -2065,7 +2101,7 @@ background: linear-gradient(to right, var(--mainColor) 0%, var(--secondColor) 10
 }
 .theme-dark .keyboardShortcutsModal-3piNz7
 {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.7) 100%), var(--profileBackground);
+    background: linear-gradient(to bottom, rgba(0,0,0,var(--topHorizontalValue)) 0%, rgba(0,0,0,var(--botHorizontalValue)) 100%), var(--profileBackground);
     background-size: cover;
     background-repeat: no-repeat!important;
     border-radius: 45px;
@@ -2134,7 +2170,7 @@ height: 20px;
 /*Custom Status Box*/
 .theme-dark .root-1gCeng
 {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%), var(--profileBackground);
+    background: linear-gradient(to bottom, rgba(0,0,0,var(--topHorizontalValue)) 0%, rgba(0,0,0,var(--botHorizontalValue)) 100%), var(--profileBackground);
     background-position: center;
     background-size: cover;
     padding: 20px;
@@ -2166,7 +2202,8 @@ height: 20px;
     background: transparent;
 }
 /*Streaming Background Remover.*/
-.headerPlaying-j0WQBV, .headerStreaming-2FjmGz
+.headerPlaying-j0WQBV, .headerStreaming-2FjmGz,
+.topSectionStreaming-1Tpf5X
 {
     background: transparent;
 }
@@ -2427,6 +2464,16 @@ Stream background removal
     line-height: 30px;
     margin-top: -5px;
 }
+.discordTag-X7dpau.da-discordTag.nameTag-m8r81H.da-nameTag .username-2b1r56.da-username
+{
+    font-size: 20px!important;
+    color: var(--mainColor);
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.75));
+}
+.friend-3KALPe .discordTag-X7dpau
+{
+    font-size: 12px!important;
+}
 .nameTag-2IFDfL .username-3gJmXY
 {
     font-size: 45px;
@@ -2502,6 +2549,11 @@ border-radius: 10px;
     width: 30px;
     margin-left: -10px;
 }
+.emojiSection-3Fb9ix
+{
+    background: rgba(0,0,0,.5);
+    backdrop-filter: saturate(180%) blur(20px);
+}
 .theme-dark .inset-3sAvek
 {
     background: rgba(0,0,0,0.45);
@@ -2514,6 +2566,7 @@ border-radius: 10px;
 .emojiPickerInExpressionPicker-3IzIcv .emojiPicker-3PwZFl
 {
     width: 100%;
+    background: transparent!important;
 }
 .closedFolderIconWrapper-15K9MK, .folder-21wGz3, .folderIconWrapper-226oVY
 {
@@ -2586,7 +2639,8 @@ border-radius: 10px;
     padding-bottom:var(--avatarSize);
 }
 .message-2g38UB.groupStart-23k01U.wrapper-2a6GCs.cozy-3raOZG.zalgo-jN1Ica .avatar-1BDn8e,
-.message-2DieIs.wrapper-2a6GCs.cozy-3raOZG.zalgo-jN1Ica .avatar-1BDn8e
+.message-2DieIs.wrapper-2a6GCs.cozy-3raOZG.zalgo-jN1Ica .avatar-1BDn8e,
+.messageGroupCozy-2iY6cT.da-messageGroupCozy.wrapper-2a6GCs.da-wrapper.cozy-3raOZG.da-cozy.zalgo-jN1Ica.da-zalgo .avatar-1BDn8e
 {
     height: 50px!important;
     width: 50px!important;
@@ -2604,8 +2658,11 @@ border-radius: 10px;
 .drawerSizingWrapper-17Mss4,
 .emojiPicker-3PwZFl, .contentWrapper-2txmjs
 {
-   background:  linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%), var(--profileBackground)!important;
+   background:  linear-gradient(to bottom, rgba(0, 0, 0, var(--topHorizontalValue)) 0%, rgba(0, 0, 0, var(--botHorizontalValue)) 100%), var(--mentionPopup)!important;
    border-radius: 25px;
+   background-size: cover!important;
+   background-position: top center;
+
 }
 .inspector-sdLnLS
 {
@@ -2625,6 +2682,30 @@ border-radius: 10px;
 .header-19cWci
 {
     color: #FFF;
+}
+
+/*Arrow Icon Remover*/
+.icon-WnO6o2
+{
+    display: none;
+}
+/*Removing Huge PoundSign???*/
+.emptyChannelIcon-cc932w {
+        display: none;
+    }
+
+    .lookBlank-3eh9lL
+    {
+        color: var(--mainColor);
+    }
+
+/*Icons Right side of channel*/
+.users-i_3-kL, .total-3tKGEB
+{
+    color: #fff!important;
+    font-weight: 900;
+    background:var(--mainColor);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 /*
 *********************************************************************************************************

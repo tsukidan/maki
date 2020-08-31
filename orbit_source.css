@@ -17,7 +17,7 @@ Un-modifiable root
 String Variables
 *********************************************************************************************************
 */
-  --version-content : " 1.5.122";
+  --version-content : " 1.5.2";
   --themeName       : "Orbit";
   --watermark       :  " ";
 
@@ -61,6 +61,8 @@ Settings Page
     font-weight: 900;
     text-shadow: 0 0 1px rgba(0,0,0,0.85);
     border: none;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.5);
     backdrop-filter: blur(20px);
 }
 /*Settings Background*/
@@ -134,7 +136,6 @@ Settings Page
     border-radius: 25px;
     padding: 30px;
     background: rgba(0,0,0,0.5);
-
 }
     /*Text Within Settings Card*/
     .theme-dark .userSettingsAccount-2eMFVR .viewBody-2Qz-jg
@@ -775,11 +776,7 @@ Emojis
   width : var(--emojiSize);
   transition: 400ms all var(--bounce);
 }
-.emoji.jumboable:hover, .emoji:hover
-{
-    height: var(--emojiHoverSize);
-    width : var(--emojiHoverSize);
-}
+
 /*
 *********************************************************************************************************
 Reaction Size Fix For Emoji
@@ -1564,7 +1561,7 @@ background: linear-gradient(to right, var(--mainColor) 0%, var(--secondColor) 10
     opacity: 0.7;
 }
 /* jump to present bar */
-.jumpToPresentBar-9P20AM
+.jumpToPresentBar-G1R9s6
 {
     background: linear-gradient(to right, var(--mainColor) 0%, var(--secondColor) 100%);
     border-radius: 15px;
@@ -1675,7 +1672,7 @@ Box-shadow/Border removals
 new message bar at the top of discord
 *********************************************************************************************************
 */
-.newMessagesBar-mujexs
+.newMessagesBar-265mhP
 {
     background: linear-gradient(to right, var(--mainColor), var(--secondColor))!important;
     margin-right: 80px;

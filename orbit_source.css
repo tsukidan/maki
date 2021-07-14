@@ -2,7 +2,7 @@
 /*
 *********************************************************************************************************
 Orbit
-Author       : Jin#1234
+Author       : Jinseul#0001
 *********************************************************************************************************
 */
 /*
@@ -17,9 +17,9 @@ Un-modifiable root
 String Variables
 *********************************************************************************************************
 */
-  --version-content : " 1.5.3";
+  --version-content : " 1.6";
   --themeName       : "Orbit";
-  --watermark       :  " created by: Jin#1234";
+  --watermark       :  " created by: Sake#1234";
 
 /*
 *********************************************************************************************************
@@ -33,6 +33,7 @@ Variables for text and shadows
   --boldTextShadow      : 0 2px 3px rgba(0,0,0,0.5)!important;
   --boldTextSize        : 900!important;
   --boldTextColor       : #fff!important;
+  --backdropVal         : saturate(180%) blur(20px);
 /*
 *********************************************************************************************************
 Animations
@@ -47,10 +48,18 @@ Settings Page
 *********************************************************************************************************
 */
 
+.theme-dark .lookOutlined-3sRXeN.colorPrimary-3b3xI6
+{
+    border: none;
+    backdrop-filter: var(--backdropVal);
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
 /*Settings Dropdowns*/
 .css-gvi9bl-control
 {
     background-color: rgba(0,0,0,0.5);
+    backdrop-filter: var(--backdropVal);
 }
 .theme-dark .divider-3wNib3
 {
@@ -73,7 +82,7 @@ Settings Page
     border: none;
     border-radius: 10px;
     background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 /*Settings Background*/
 .theme-dark .sidebarRegion-VFTUkN
@@ -100,7 +109,7 @@ Settings Page
         padding: 30px;
         border-radius: 30px;
         margin-top: 10px;
-
+        backdrop-filter: var(--backdropVal);
     }
     /*Nitro Settings*/
     /*Nitro Descriptions*/
@@ -116,7 +125,7 @@ Settings Page
         background:rgba(0,0,0,0.75);
         padding: 20px;
         border-radius: 30px;
-
+        backdrop-filter: var(--backdropVal);
     }
 
     /*Option Titles Under Privacy*/
@@ -146,6 +155,7 @@ Settings Page
     border-radius: 25px;
     padding: 30px;
     background: rgba(0,0,0,0.5);
+    backdrop-filter: var(--backdropVal);
 }
     /*Text Within Settings Card*/
     .theme-dark .userSettingsAccount-2eMFVR .viewBody-2Qz-jg
@@ -204,7 +214,7 @@ Settings Page
             background: rgba(0,0,0,0.5);
             border-radius: 15px;
             border: none;
-
+            backdrop-filter: var(--backdropVal);
         }
         /*Chat Appearance Preview*/
         .container-1RjyoP .previewInner-2iCbun
@@ -252,12 +262,11 @@ User Profiles
 
 .inner-1ilYF7
 {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, var(--topHorizontalValue)) 0%, rgba(0, 0, 0, var(--botHorizontalValue)) 100%), var(--profileBackground)!important;
+    background: transparent!important;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px;
     border-radius: 30px;
-    box-shadow: 0 10px 100px rgba(0,0,0,0.95);
 }
 .theme-dark .modal-yWgWj-
 {
@@ -296,15 +305,20 @@ User Profiles
     color: #fff;
 }
 /*Backdrop*/
-/*using top and bottom values for the main gradient over the picture*/
+/*using top and bottom values for the main gradient over the picture
+
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), var(--mainBackground)!important;
+*/
 .backdrop-1wrmKB, .backdropWithLayer-3_uhz4
 {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), var(--mainBackground)!important;
-    background-repeat: no-repeat!important;
-    background-position: center!important;
-    background-size: cover!important;
-
-
+   backdrop-filter: var(--backdropVal);
+   background:rgba(0, 0, 0, 0.25)!important;
+   opacity: 1!important;
+}
+.root-217Brm.idle-1j3olu
+{
+    backdrop-filter: var(--backdropVal);
+    background: rgba(0, 0, 0, 0.45);
 }
 /*Border Removal*/
 .tabBarContainer-1s1u-z
@@ -407,10 +421,16 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
     color: #FFF;
     font-weight: 900;
 }
+/*Search Suggestion Background fix - 7/13/21*/
+.theme-dark .container-3ayLPN
+{
+    background: transparent;
+}
 /*Search Suggestions*/
 .resultsGroup-r_nuzN 
 {
-    background:linear-gradient(to bottom, rgba(0, 0, 0, var(--topHorizontalValue)) 0%, rgba(0, 0, 0, var(--botHorizontalValue)) 100%), var(--profileBackground)!important;
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.4);
     background-size: cover!important;
     background-repeat: no-repeat!important;
 }
@@ -427,12 +447,14 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
         display: none;
     }
     /*context menu*/
-.theme-dark .menu-Sp6bN1, .styleFlexible-wGDiIL
+.theme-dark .menu-Sp6bN1, .styleFlexible-wGDiIL,
+.styleFixed-sX-yHV
 {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), var(--contextMenu);
+    background: rgba(0,0,0,0.5);
     background-size: cover!important;
     background-position: center;
     border-radius: 15px!important;
+    backdrop-filter: saturate(180%) blur(20px);
 }
 .button-F9qN4n, .wrapper-3_530D
 {
@@ -441,7 +463,7 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
 .submenu-2-ysNh
 {
     background: rgba(0,0,0,0.5)!important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     border-radius: 15px!important;
 }
 /*@ Mentions / Search Results page*/
@@ -478,6 +500,7 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
 {
     border-radius: 30px;
     box-shadow: 0 8px 20px #000;
+    backdrop-filter: blur(30px);
 }
 .theme-dark .messagesPopoutWrap-1MQ1bW
 {
@@ -497,7 +520,6 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
     background: transparent!important;
 }
 .theme-dark .messagesPopoutWrap-1MQ1bW, .searchResultsWrap-3-pOjs,
-.styleFixed-sX-yHV,
 .container-enaOkj
 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, var(--topPortraitValue)) 0%, rgba(0, 0, 0, var(--botPortraitValue)) 100%), var(--userPopout);
@@ -608,15 +630,20 @@ Avatars & Main Chat/ chat message
     background-color: var(--mainColor);
     width: -webkit-fill-available;
     opacity: 0.2;
+    border-radius: 30px;
+    filter: drop-shadow(2px 4px 6px black);
 }
 .mentioned-xhSam7 {
     position: relative;
     background-color: transparent;
+    border: 1.5px solid var(--secondColor);
+    border-radius: 35px;
+    backdrop-filter: blur(20px);
 }
 .theme-dark .perksModal-fSYqOq
 {
     background: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
 /*
@@ -689,7 +716,6 @@ User Popouts
 }
  .headerTag-2pZJzA 
 {
-     color:#fff;
      font-weight: 900;
      text-shadow:none;;
 }
@@ -912,6 +938,7 @@ Attachments
     background: rgba(0,0,0,0.4);
     padding:15px;
     border-radius: 20px;
+    backdrop-filter: var(--backdropVal);
 }
     /*Attachment Title*/
     .theme-dark .filenameLinkWrapper-1-14c5
@@ -930,7 +957,7 @@ Attachments
 Home icon code
 *********************************************************************************************************
 */
-.wrapper-1Rf91z .homeIcon-tEMBK1{
+.homeIcon-FuNwkv{
 display:none;
 }
 
@@ -982,7 +1009,7 @@ folder icons
 {
     background: transparent;
 }
-#app-mount .wrapper-1Rf91z .listItem-2P_4kh .wrapper-sa6paO .item-2hkk8m {
+.item-2hkk8m {
     margin-left: 0!important;
     border-radius: 5px;
     background: linear-gradient(to bottom, var(--mainColor)  0%, var(--secondColor) 100%);
@@ -1005,12 +1032,9 @@ folder icons
     border-radius: 30px;
 }
 .members-1998pB:hover {
-    width: 450px!important;
-    background: linear-gradient(to bottom, rgba(0,0,0,var(--topPortraitValue)) 0%, rgba(0,0,0,var(--botPortraitValue)) 100%), var(--settingsBackground);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:left center;
-    border-radius: 40px 0px 0px 0px;
+    width: 250px!important;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: transparent;
     opacity: 1;
     height: 100%!important;
 }
@@ -1018,7 +1042,10 @@ folder icons
 {
     background: rgba(0, 0, 0, 0.5);
 }
-
+.popoutBanner-19WKGg
+{
+    opacity: 0;
+}
 .theme-dark .members-1998pB .membersGroup-v9BXpm {
     text-transform: uppercase;
     text-align: left;
@@ -1029,7 +1056,6 @@ folder icons
     height: 20px;
     font-weight: 900;
     font-size: 14px;
-    filter: drop-shadow(0 4px 10px #000);
     color: var(--mainColor)!important;
 }
 .members-1998pB:hover .membersGroup-v9BXpm {
@@ -1174,17 +1200,20 @@ smarter embeds
 drop shadow
 *********************************************************************************************************
 */
+/*
+
 .layers-3iHuyZ
 {
-    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.85));
 }
 .accommodateScrollbar-21WtU7 .item-1tOPte
 {
-    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.85));
     font-weight: 900;
     color: #FFF;
 }
 
+*/
 
 /*
 *********************************************************************************************************
@@ -1224,11 +1253,12 @@ embed edits
 /*new embeds*/
 .grid-1nZz7S
 {
-    background:linear-gradient(to bottom, rgba(0,0,0,var(--topHorizontalValue)) 0%, rgba(0,0,0,var(--botHorizontalValue)) 100%), var(--profileBackground);
+    background: rgba(0, 0, 0, 0.45);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px;
     background-position: center;
+    backdrop-filter: var(--backdropVal);
 }
 
 /*new smart embeds*/
@@ -1305,12 +1335,33 @@ gradient border on channel names
 {
     box-shadow: none;
 }
+/*Muted Channel Icon*/
+.modeMuted-onO3r- .icon-1DeIlz, .modeMuted-onO3r- .name-23GUGE
+{
+    color: rgba(220,220,220,0.35);
+}
 /*Text Channels*/
 .name-23GUGE
 {
     color: rgba(255, 255, 255, 0.884);
+    font-size: 14px;
 }
 
+/*Selected Text Channels*/
+.modeSelected-346R90 .content-1x5b-n, 
+.modeSelected-346R90:hover .content-1x5b-n
+{
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+/*Channel Icons*/
+.modeSelected-346R90 .icon-1DeIlz, 
+.modeSelected-346R90:hover .icon-1DeIlz, 
+.modeUnread-1qO3K1 .icon-1DeIlz, 
+.modeUnread-1qO3K1:hover .icon-1DeIl
+{
+    color: var(--mainColor);
+}
 .container-2ax-kl
 {
     text-align: center;
@@ -1324,7 +1375,7 @@ gradient border on channel names
     line-height: 30px;
 }
 /*Guild Seperator*/
-.guildSeparator-3s64Iy
+.guildSeparator-33mFX6
 {
 background-image: linear-gradient(90deg, transparent, transparent), linear-gradient(90deg, transparent, var(--mainColor), var(--secondColor), transparent)!important; 
 filter: drop-shadow(var(--dropShadowValue));
@@ -1632,11 +1683,12 @@ background: linear-gradient(to right, var(--mainColor) 0%, var(--secondColor) 10
 /* jump to present bar */
 .jumpToPresentBar-G1R9s6
 {
-    background: linear-gradient(to right, var(--mainColor) 0%, var(--secondColor) 100%);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.4);
     margin-right: 80px;
     padding-top: 5px;
+    backdrop-filter: blur(20px);
     z-index: 999999999!important;
 }
 /*
@@ -1646,7 +1698,8 @@ Emoji/Mention backdrop
 */
 .autocompleteInner-zh20B_
 {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.7) 100%), var(--mentionPopup);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: var(--backdropVal);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1743,11 +1796,12 @@ new message bar at the top of discord
 */
 .newMessagesBar-265mhP
 {
-    background: linear-gradient(to right, var(--mainColor), var(--secondColor))!important;
+    background: rgba(0, 0, 0, 0.4);
     margin-right: 80px;
     z-index: 9999999!important;
     border-radius: 30px;
     margin-top: 10px;
+    backdrop-filter: blur(20px);
 }
     /*Bottom new Message bar*/
     .unread-1xRYoj
@@ -1826,6 +1880,12 @@ Bottom-left of discord - user container and text box
 {
     background: transparent;
 }
+/*Status Emote*/
+.customEmoji-2_2FwB
+{
+    height: 20px;
+    width: 20px;
+}
 /*Status Color Update*/
 .customStatusText-3YJeRZ
 {
@@ -1834,7 +1894,17 @@ Bottom-left of discord - user container and text box
     font-weight: 900;
     text-shadow: 0 2px 3px rgba(0,0,0,0.65);
 }
-
+/*Popout menu when selecting status*/
+.popout-VcNcHB
+{
+    background:rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+}
+.lookFilled-22uAsw.select-2fjwPw
+{
+    border: 2px solid var(--mainColor);
+    border-radius: 15px;
+}
 /*User Container*/
 /*Game Activity User Container*/
 .container-3T1zWi:before
@@ -2236,11 +2306,12 @@ height: 20px;
 /*Custom Status Box*/
 .theme-dark .root-1gCeng
 {
-    background: linear-gradient(to bottom, rgba(0,0,0,var(--topHorizontalValue)) 0%, rgba(0,0,0,var(--botHorizontalValue)) 100%), var(--profileBackground);
+    background: transparent;
     background-position: center;
     background-size: cover;
     padding: 20px;
     border-radius: 30px;
+    box-shadow: none;
 }
 .art-347BZj
 {
@@ -2300,11 +2371,6 @@ height: 20px;
 {
     margin-left: 30px;
     display: inherit;
-}
-.embedFull-2tM8--
-{
-    margin-left: -30px;
-    border: none;
 }
 .button-1ZiXG9 .emoji
 {
@@ -2474,6 +2540,11 @@ Stream background removal
     box-shadow: 0 0 10px #FFF;
     filter: drop-shadow(0 0 10px var(--mainColor));
 }
+.icon-2IuuZd, .username-3KYl0N
+{
+    color: #fff;
+    font-weight: 900;
+}
 .avatarSmall-2CW6I1
 {
     transition: 400ms all var(--bounce);
@@ -2527,8 +2598,22 @@ Stream background removal
 {
     font-size: 30px;
     font-weight: 900;
-    line-height: 30px;
-    margin-top: -5px;
+    line-height: 35px;
+    color: #FFF!important;
+}
+/*Discord Tag*/
+.topSectionNormal-2-vo2m .discriminator-xUhQkU
+{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.headerNormal-T_seeN .headerTag-2pZJzA,
+.headerTag-2pZJzA,
+.topSectionNormal-2-vo2m .discriminator-xUhQkU,
+.nameTag-2IFDfL .discriminator-xUhQkU
+{
+    color: var(--mainColor);
+    opacity: 1;
 }
 .discordTag-X7dpau.da-discordTag.nameTag-m8r81H.da-nameTag .username-2b1r56.da-username
 {
@@ -2724,7 +2809,8 @@ border-radius: 10px;
 .drawerSizingWrapper-17Mss4,
 .emojiPicker-3PwZFl, .contentWrapper-2txmjs
 {
-   background:  linear-gradient(to bottom, rgba(0, 0, 0, var(--topHorizontalValue)) 0%, rgba(0, 0, 0, var(--botHorizontalValue)) 100%), var(--mentionPopup)!important;
+   background:  rgba(0, 0, 0, 0.25);
+   backdrop-filter: var(--backdropVal);
    border-radius: 25px;
    background-size: cover!important;
    background-position: top center;
@@ -2743,7 +2829,7 @@ border-radius: 10px;
 {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 30px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 .header-19cWci
 {
@@ -2804,6 +2890,179 @@ border-radius: 10px;
 .colorMuted-HdFt4q
 {
     color:#FFF;
+}
+
+.wrapper-129saQ
+{
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 0 8px rgba(0,0,0,0.85);
+}
+
+/*Drop Down Fix (Roles)*/
+.container-3XJ8ns
+{
+    backdrop-filter: blur(25px) saturate(180%);
+    background: rgba(0,0,0,0.5);
+}
+
+/**/
+.topSectionNormal-2-vo2m .activityHeader-1PExlk,
+.topSectionNormal-2-vo2m .customStatusText-39gdCI
+{
+    color:#FFF;
+    font-weight: 900;
+}
+.lookOutlined-3sRXeN.colorWhite-rEQuAQ,
+.lookFilled-1Gx00P.colorGreen-29iAKY,
+.lookInverted-2D7oAl.colorGreen-29iAKY,
+.lookInverted-2D7oAl.colorBrand-3pXr91
+{
+    border: none;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 20px;
+    margin-right: -5px;
+    backdrop-filter: saturate(180%) blur(20px);
+}
+/*
+*********************************************************************************************************
+Join or Create server
+*********************************************************************************************************
+*/
+/*Title*/
+.colorHeaderPrimary-26Jzh-
+{
+    color: #FFF;
+    font-weight: 900;
+    font-size: 20px;
+}
+.colorHeaderSecondary-3Sp3Ft,
+.sampleLink-2NLvZg
+{
+    color: rgba(255,255,255,0.75);
+}
+/*Container for options*/
+.container-UC8Ug1
+{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: none;
+    border-color: transparent;
+}
+/*Join Button*/
+.lookFilled-1Gx00P.colorGrey-2DXtkV
+{
+    background-color: var(--mainColor);
+}
+.input--jS-j2
+{
+    background: transparent;
+}
+
+.emojiImage-1_XFkC
+{
+    height: calc(var(--emojiSize) - 10px)!important;
+    width: calc(var(--emojiSize) - 10px)!important;
+}
+
+/*Profile Banner Update*/
+.profileBanner-33-uE1, .headerNormal-1l1Znk, .headerTop-2y3V6H,
+.aboutMeSection-3bipSD, .headerTop-2cWpdB
+{
+    background: transparent!important;
+}
+.profileBanner-33-uE1, .headerNormal-1l1Znk, .headerTop-2y3V6H
+{
+    border: none;
+}
+.avatar-22FtUu
+{
+    border-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    background: transparent;
+}
+.customStatusText-2wWmYP,
+.aboutMeSection-3bipSD
+{
+    font-weight: 900;
+}
+
+/*Profile Text*/
+.colorLink-2vG20E, .theme-dark .base-1x0h_U
+{
+    color: var(--mainColor);
+    font-weight: 900;
+}
+#app-mount .guilds-1SWlCJ .svg-1X37T1, #app-mount .guilds-1SWlCJ .wrapper-25eVIn,
+#app-mount .guilds-1SWlCJ .guildsError-b7zR5H, #app-mount .guilds-1SWlCJ .placeholderMask-3K9THS
+{
+    backdrop-filter: var(--backdropVal);
+}
+.qualitySettingsContainer-1gOtRJ, .theme-dark .item-3T2z1R
+{
+    border: none;
+}
+/*
+*********************************************************************************************************
+New User Popoout
+*********************************************************************************************************
+*/
+.userPopout-xaxa6l
+{
+    background: rgba(0,0,0,0.55);
+    filter: none!important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(20px) saturate(180%);
+}
+
+/*Spotify PLaying BG*/
+.bodyInnerWrapper-26fQXj, .footer-3UKYOU
+{
+    background: transparent
+}
+
+/*About Me Section*/
+.aboutMeSection-1Fw5Ia .aboutMeBody-3GuvKk,
+.userBio-3tlrzS
+{
+    margin-left: -30px;
+}
+
+.profileBannerPremium-35utuo
+{
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
+}
+.topSection-y3p-_D,
+.body-r6_QPy
+{
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 30px;
+}
+.body-r6_QPy
+{
+    margin-top: 10px;
+}
+.connectedAccount-2Jb-Z0
+{
+    border: none;
+    background:rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 10px;
+}
+/*Spotify Plugin*/
+.container-6sXIoE
+{
+    border: none;
+}
+.searchResultsWrap-3-pOjs .avatar-1BDn8e
+{
+    height: 45px!important;
+    width: 45px!important;
+    margin-left: -10px;
 }
 /*
 *********************************************************************************************************

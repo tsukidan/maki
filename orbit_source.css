@@ -3004,6 +3004,12 @@ Join or Create server
 {
     border: none;
 }
+.background-1QDuV2::after
+{
+    content: var(--themeName) var(--version-content) var(--watermark);
+    color: var(--mainColor);
+    font-weight: 900;
+}
 /*
 *********************************************************************************************************
 New User Popoout

@@ -17,7 +17,7 @@ Un-modifiable root
 String Variables
 *********************************************************************************************************
 */
-  --version-content : " 1.6";
+  --version-content : " 1.6.1";
   --themeName       : "Orbit";
   --watermark       :  " created by: Jinseul#0001";
 
@@ -450,11 +450,10 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
 .theme-dark .menu-Sp6bN1, .styleFlexible-wGDiIL,
 .styleFixed-sX-yHV
 {
-    background: rgba(0,0,0,0.5);
+    background:black;
     background-size: cover!important;
     background-position: center;
     border-radius: 15px!important;
-    backdrop-filter: saturate(180%) blur(20px);
 }
 .button-F9qN4n, .wrapper-3_530D
 {
@@ -463,8 +462,8 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
 .submenu-2-ysNh
 {
     background: rgba(0,0,0,0.5)!important;
-    backdrop-filter: saturate(180%) blur(20px);
     border-radius: 15px!important;
+    backdrop-filter: blur(20px);
 }
 /*@ Mentions / Search Results page*/
 /*Server Settings*/
@@ -506,6 +505,7 @@ Context Menu, Server Settings Menu, Search results menu, and @ Mentions/ Pinned 
 {
     width: 700px;
     padding-right: 20px;
+    backdrop-filter: blur(20px);
 }
 /*
 .title-3qD0b-

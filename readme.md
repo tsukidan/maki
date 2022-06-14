@@ -1,4 +1,4 @@
-## Maki
+# Maki
 
 * Maki is a BetterDiscord theme created and maintained by tsukidan.
 * Users will be able to customize colors, backgrounds and more with this BetterDiscord theme.

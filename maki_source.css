@@ -164,6 +164,8 @@ Friends List
 Main Chat Text
 *********************************************************************************************************
 */
+/*Main Chat*/
+
 /*Roles*/
 .role-2TIOKu
 {
@@ -337,6 +339,7 @@ text-align: right!important;
   color: rgba(255,255,255,0.9);
   font-weight: 500;
   text-shadow: var(--textShadow);
+  font-size: var(--fontSize);
 }
 
 .markup-eYLPri,
@@ -349,6 +352,11 @@ text-align: right!important;
 {
   margin-right: 80px;
 }
+.avatarDecoration-34OC0G
+{
+  width: calc(var(--avatarSize) + 10px);
+  height: calc(var(--avatarSize) + 10px);
+}
 .avatar-2e8lTP{
   width: var(--avatarSize) !important;
   height: var(--avatarSize) !important;
@@ -357,12 +365,16 @@ text-align: right!important;
   transition: all 400ms var(--bounce);
   border-radius: var(--avatarRound);
 }
+/*
+
+avatar hover (disabled temporarily)
+
 .avatar-2e8lTP:hover{
   width: calc(var(--avatarSize) + 25px)!important;
   height:calc(var(--avatarSize) + 25px)!important;
   background-size: cover;
   background-repeat: no-repeat;
-}
+}*/
 /*Server Invites*/
 .wrapper-1HIH0j
 {
@@ -431,8 +443,7 @@ Discord Main Page
 }
 .header-3OsQeK
 {
-  background: var(--blurBg);
-  backdrop-filter: var(--blur);
+  filter: drop-shadow(rgba(0,0,0,0) 0,0,0,10px);
   border-radius: var(--blurBorder);
 }
 /*Guild header & Channel Topic box shadow removal*/
@@ -637,6 +648,14 @@ User Popouts
 {
   background: var(--blurBg);
   backdrop-filter: var(--blur);
+}
+
+/*Private Call*/
+/*Call Background*/
+.wrapper-1gVUIN.minimum-fXpVNc {
+  background-color: var(--background-floating);
+  background: transparent;
+  filter:drop-shadow(0 0 10px rgba(0,0,0,0.85));
 }
 /*
 *********************************************************************************************************

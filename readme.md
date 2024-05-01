@@ -1,3 +1,4 @@
+<img alt="Name" src="https://img.shields.io/badge/!!THIS HAS BEEN DISCONTINUED, PLEASE REFER TO tsuki REPOSITORY INSTEAD!!-FF0000?style=for-the-badge">
 # Maki
 
 * Maki is a BetterDiscord theme created and maintained by tsukidan.
